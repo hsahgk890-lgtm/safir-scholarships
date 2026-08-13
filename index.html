@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سفير المنح الدراسية</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+background:#f5f7fb;
+color:#172033
+}
+header{
+background:linear-gradient(135deg,#082b4c,#1269a8);
+color:white;
+padding-bottom:60px
+}
+nav{
+max-width:1100px;
+margin:auto;
+padding:22px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center
+}
+.logo{
+font-size:24px;
+font-weight:bold
+}
+.logo span{color:#f5c451}
+nav a{
+color:white;
+text-decoration:none;
+margin-right:20px
+}
+.hero{
+max-width:1000px;
+margin:auto;
+text-align:center;
+padding:55px 20px
+}
+.hero h1{
+font-size:45px;
+margin:10px
+}
+.hero p{
+font-size:19px;
+color:#dcecff;
+line-height:1.8
+}
+.search{
+background:white;
+max-width:750px;
+margin:30px auto 0;
+padding:8px;
+border-radius:15px;
+display:flex
+}
+.search input{
+flex:1;
+border:0;
+outline:0;
+padding:15px;
+font-size:16px
+}
+.search button{
+border:0;
+background:#f5c451;
+padding:0 25px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer
+}
+main{
+max-width:1100px;
+margin:auto;
+padding:45px 20px
+}
+h2{margin-bottom:22px}
+.categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
+}
+.category{
+background:white;
+padding:25px 10px;
+text-align:center;
+border-radius:15px;
+border:1px solid #e5e9ef;
+font-weight:bold;
+cursor:pointer
+}
+.category:hover{transform:translateY(-3px)}
+.grants{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
+}
+.card{
+background:white;
+padding:22px;
+border-radius:17px;
+border:1px solid #e5e9ef;
+box-shadow:0 5px 20px #00000008
+}
+.status{
+display:inline-block;
+background:#e6f7ed;
+color:#16804a;
+padding:7px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold
+}
+.card h3{font-size:20px}
+.card p{
+color:#667085;
+line-height:1.8
+}
+.card button{
+width:100%;
+border:0;
+background:#082b4c;
+color:white;
+padding:12px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold
+}
+footer{
+background:#082033;
+color:white;
+text-align:center;
+padding:30px
+}
+@media(max-width:800px){
+.categories{grid-template-columns:1fr 1fr}
+.grants{grid-template-columns:1fr}
+.hero h1{font-size:34px}
+nav a{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+<div class="logo">
+سفير <span>المنح الدراسية</span>
+</div>
+
+<div>
+<a href="#">الرئيسية</a>
+<a href="#grants">المنح</a>
+<a href="#categories">التخصصات</a>
+</div>
+</nav>
+
+<section class="hero">
+
+<h1>اكتشف منحتك القادمة 🎓</h1>
+
+<p>
+دليلك للوصول إلى المنح الدراسية والفرص التعليمية في مصر والوطن العربي
+</p>
+
+<div class="search">
+<input id="search" placeholder="ابحث عن منحة أو جامعة أو تخصص">
+<button onclick="search()">بحث</button>
+</div>
+
+</section>
+
+</header>
+
+<main>
+
+<section id="categories">
+
+<h2>تصفح حسب التخصص</h2>
+
+<div class="categories">
+
+<div class="category" onclick="filter('طب')">
+🩺<br>طب بشري
+</div>
+
+<div class="category" onclick="filter('صيدلة')">
+💊<br>صيدلة
+</div>
+
+<div class="category" onclick="filter('هندسة')">
+⚙️<br>هندسة
+</div>
+
+<div class="category" onclick="filter('حاسبات')">
+💻<br>حاسبات وذكاء اصطناعي
+</div>
+
+</div>
+
+</section>
+
+<section id="grants">
+
+<h2 style="margin-top:50px">المنح المفتوحة الآن 🟢</h2>
+
+<div class="grants" id="grantList">
+
+<div class="card" data-search="طب باديا مصر منحة كاملة">
+
+<span class="status">مفتوحة 🟢</span>
+
+<h3>منحة دراسية كاملة</h3>
+
+<p>
+🎓 الجامعة: جامعة باديا<br>
+🩺 التخصص: طب وتخصصات أخرى<br>
+💰 التمويل: منحة كاملة
+</p>
+
+<button>عرض تفاصيل المنحة</button>
+
+</div>
+
+<div class="card" data-search="هندسة جامعة مصر منحة">
+
+<span class="status">مفتوحة 🟢</span>
+
+<h3>منحة جامعية</h3>
+
+<p>
+🎓 الجامعة: جامعة مصرية<br>
+⚙️ التخصص: هندسة<br>
+💰 التمويل: حسب البرنامج
+</p>
+
+<button>عرض تفاصيل المنحة</button>
+
+</div>
+
+<div class="card" data-search="حاسبات ذكاء اصطناعي">
+
+<span class="status">قريبًا 🟡</span>
+
+<h3>منحة حاسبات وذكاء اصطناعي</h3>
+
+<p>
+🎓 جامعة مصرية<br>
+💻 التخصص: حاسبات وذكاء اصطناعي<br>
+📅 التقديم يفتح قريبًا
+</p>
+
+<button>عرض التفاصيل</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© 2026 سفير المنح الدراسية
+<br>
+دليلك لأفضل المنح والفرص التعليمية 🎓
+</footer>
+
+<script>
+
+function search(){
+
+let value=document.getElementById("search").value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+let text=card.dataset.search.toLowerCase();
+
+card.style.display=
+text.includes(value) ? "block" : "none";
+
+});
+
+}
+
+function filter(value){
+
+document.getElementById("search").value=value;
+
+search();
+
+document.getElementById("grants").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+  </html>
