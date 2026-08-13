@@ -1,310 +1,282 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سفير المنح الدراسية</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:Arial,Tahoma,sans-serif;
-background:#f5f7fb;
-color:#172033
-}
-header{
-background:linear-gradient(135deg,#082b4c,#1269a8);
-color:white;
-padding-bottom:60px
-}
-nav{
-max-width:1100px;
-margin:auto;
-padding:22px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center
-}
-.logo{
-font-size:24px;
-font-weight:bold
-}
-.logo span{color:#f5c451}
-nav a{
-color:white;
-text-decoration:none;
-margin-right:20px
-}
-.hero{
-max-width:1000px;
-margin:auto;
-text-align:center;
-padding:55px 20px
-}
-.hero h1{
-font-size:45px;
-margin:10px
-}
-.hero p{
-font-size:19px;
-color:#dcecff;
-line-height:1.8
-}
-.search{
-background:white;
-max-width:750px;
-margin:30px auto 0;
-padding:8px;
-border-radius:15px;
-display:flex
-}
-.search input{
-flex:1;
-border:0;
-outline:0;
-padding:15px;
-font-size:16px
-}
-.search button{
-border:0;
-background:#f5c451;
-padding:0 25px;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer
-}
-main{
-max-width:1100px;
-margin:auto;
-padding:45px 20px
-}
-h2{margin-bottom:22px}
-.categories{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px
-}
-.category{
-background:white;
-padding:25px 10px;
-text-align:center;
-border-radius:15px;
-border:1px solid #e5e9ef;
-font-weight:bold;
-cursor:pointer
-}
-.category:hover{transform:translateY(-3px)}
-.grants{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px
-}
-.card{
-background:white;
-padding:22px;
-border-radius:17px;
-border:1px solid #e5e9ef;
-box-shadow:0 5px 20px #00000008
-}
-.status{
-display:inline-block;
-background:#e6f7ed;
-color:#16804a;
-padding:7px 12px;
-border-radius:20px;
-font-size:13px;
-font-weight:bold
-}
-.card h3{font-size:20px}
-.card p{
-color:#667085;
-line-height:1.8
-}
-.card button{
-width:100%;
-border:0;
-background:#082b4c;
-color:white;
-padding:12px;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold
-}
-footer{
-background:#082033;
-color:white;
-text-align:center;
-padding:30px
-}
-@media(max-width:800px){
-.categories{grid-template-columns:1fr 1fr}
-.grants{grid-template-columns:1fr}
-.hero h1{font-size:34px}
-nav a{display:none}
-}
-</style>
-</head>
+  <title>سفير المنح الدراسية | دليلك للمنح والفرص التعليمية</title>
 
-<body>
+  <meta
+    name="description"
+    content="سفير المنح الدراسية - منصة تساعدك على اكتشاف المنح الدراسية والفرص التعليمية والجامعات."
+  >
 
-<header>
+  <style>
+    :root {
+      --primary: #0b3555;
+      --primary-2: #146aa2;
+      --gold: #f4c64e;
+      --gold-dark: #d9a72f;
+      --bg: #f5f8fc;
+      --card: #ffffff;
+      --text: #142333;
+      --muted: #697586;
+      --border: #e4eaf0;
+      --success: #16824d;
+      --success-bg: #e8f7ef;
+      --warning: #a96b00;
+      --warning-bg: #fff4d8;
+      --danger: #b42318;
+      --danger-bg: #fdecec;
+      --shadow: 0 12px 35px rgba(11, 53, 85, 0.08);
+      --radius: 18px;
+    }
 
-<nav>
-<div class="logo">
-سفير <span>المنح الدراسية</span>
-</div>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<div>
-<a href="#">الرئيسية</a>
-<a href="#grants">المنح</a>
-<a href="#categories">التخصصات</a>
-</div>
-</nav>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<section class="hero">
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-<h1>اكتشف منحتك القادمة 🎓</h1>
+    button,
+    input,
+    select {
+      font: inherit;
+    }
 
-<p>
-دليلك للوصول إلى المنح الدراسية والفرص التعليمية في مصر والوطن العربي
-</p>
+    a {
+      text-decoration: none;
+    }
 
-<div class="search">
-<input id="search" placeholder="ابحث عن منحة أو جامعة أو تخصص">
-<button onclick="search()">بحث</button>
-</div>
+    /* =========================
+       HEADER
+    ========================== */
 
-</section>
+    header {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.10), transparent 25%),
+        radial-gradient(circle at 80% 10%, rgba(244,198,78,.15), transparent 20%),
+        linear-gradient(135deg, #082b47 0%, #0d4d79 55%, #126ca4 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
 
-</header>
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: auto;
+    }
 
-<main>
+    .navbar {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-<section id="categories">
+    .brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
 
-<h2>تصفح حسب التخصص</h2>
+    .brand span {
+      color: var(--gold);
+    }
 
-<div class="categories">
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
 
-<div class="category" onclick="filter('طب')">
-🩺<br>طب بشري
-</div>
+    .nav-links a {
+      color: rgba(255,255,255,.92);
+      font-size: 14px;
+      transition: .2s;
+    }
 
-<div class="category" onclick="filter('صيدلة')">
-💊<br>صيدلة
-</div>
+    .nav-links a:hover {
+      color: var(--gold);
+    }
 
-<div class="category" onclick="filter('هندسة')">
-⚙️<br>هندسة
-</div>
+    .hero {
+      padding: 62px 0 85px;
+      text-align: center;
+    }
 
-<div class="category" onclick="filter('حاسبات')">
-💻<br>حاسبات وذكاء اصطناعي
-</div>
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
 
-</div>
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.15;
+      max-width: 900px;
+      margin: auto;
+      font-weight: 900;
+    }
 
-</section>
+    .hero h1 span {
+      color: var(--gold);
+    }
 
-<section id="grants">
+    .hero p {
+      max-width: 760px;
+      margin: 18px auto 30px;
+      color: rgba(255,255,255,.80);
+      font-size: 17px;
+    }
 
-<h2 style="margin-top:50px">المنح المفتوحة الآن 🟢</h2>
+    .search-box {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      border-radius: 18px;
+      padding: 9px;
+      display: flex;
+      gap: 8px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.18);
+    }
 
-<div class="grants" id="grantList">
+    .search-box input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      color: var(--text);
+      padding: 15px 16px;
+      font-size: 16px;
+      background: transparent;
+    }
 
-<div class="card" data-search="طب باديا مصر منحة كاملة">
+    .search-btn {
+      border: 0;
+      cursor: pointer;
+      background: var(--gold);
+      color: #142333;
+      font-weight: 900;
+      border-radius: 12px;
+      padding: 0 24px;
+      transition: .2s;
+    }
 
-<span class="status">مفتوحة 🟢</span>
+    .search-btn:hover {
+      background: #ffd66b;
+      transform: translateY(-1px);
+    }
 
-<h3>منحة دراسية كاملة</h3>
+    /* =========================
+       QUICK STATS
+    ========================== */
 
-<p>
-🎓 الجامعة: جامعة باديا<br>
-🩺 التخصص: طب وتخصصات أخرى<br>
-💰 التمويل: منحة كاملة
-</p>
+    .stats-wrap {
+      margin-top: -38px;
+      position: relative;
+      z-index: 2;
+    }
 
-<button>عرض تفاصيل المنحة</button>
+    .stats {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+    }
 
-</div>
+    .stat {
+      padding: 22px 15px;
+      text-align: center;
+      border-left: 1px solid var(--border);
+    }
 
-<div class="card" data-search="هندسة جامعة مصر منحة">
+    .stat:last-child {
+      border-left: 0;
+    }
 
-<span class="status">مفتوحة 🟢</span>
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: var(--primary);
+    }
 
-<h3>منحة جامعية</h3>
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-<p>
-🎓 الجامعة: جامعة مصرية<br>
-⚙️ التخصص: هندسة<br>
-💰 التمويل: حسب البرنامج
-</p>
+    /* =========================
+       MAIN
+    ========================== */
 
-<button>عرض تفاصيل المنحة</button>
+    main {
+      padding: 55px 0 80px;
+    }
 
-</div>
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
 
-<div class="card" data-search="حاسبات ذكاء اصطناعي">
+    .section-head h2 {
+      font-size: 28px;
+      color: var(--primary);
+    }
 
-<span class="status">قريبًا 🟡</span>
+    .section-head p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 5px;
+    }
 
-<h3>منحة حاسبات وذكاء اصطناعي</h3>
+    /* =========================
+       FILTERS
+    ========================== */
 
-<p>
-🎓 جامعة مصرية<br>
-💻 التخصص: حاسبات وذكاء اصطناعي<br>
-📅 التقديم يفتح قريبًا
-</p>
+    .filters {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr auto;
+      gap: 12px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow);
+    }
 
-<button>عرض التفاصيل</button>
+    .field label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 7px;
+      font-weight: 700;
+    }
 
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-<footer>
-© 2026 سفير المنح الدراسية
-<br>
-دليلك لأفضل المنح والفرص التعليمية 🎓
-</footer>
-
-<script>
-
-function search(){
-
-let value=document.getElementById("search").value.toLowerCase();
-
-let cards=document.querySelectorAll(".card");
-
-cards.forEach(card=>{
-
-let text=card.dataset.search.toLowerCase();
-
-card.style.display=
-text.includes(value) ? "block" : "none";
-
-});
-
-}
-
-function filter(value){
-
-document.getElementById("search").value=value;
-
-search();
-
-document.getElementById("grants").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-</script>
-
-</body>
-  </html>
+    .field select {
