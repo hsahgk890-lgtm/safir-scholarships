@@ -2,35 +2,23 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>سفير المنح الدراسية | دليلك للمنح والفرص التعليمية</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  >
+
+  <title>سفير المنح الدراسية | اكتشف منحتك القادمة</title>
 
   <meta
     name="description"
-    content="سفير المنح الدراسية - منصة تساعدك على اكتشاف المنح الدراسية والفرص التعليمية والجامعات."
+    content="سفير المنح الدراسية - منصتك لاكتشاف المنح الدراسية والفرص التعليمية في مصر والوطن العربي."
   >
 
   <style>
-    :root {
-      --primary: #0b3555;
-      --primary-2: #146aa2;
-      --gold: #f4c64e;
-      --gold-dark: #d9a72f;
-      --bg: #f5f8fc;
-      --card: #ffffff;
-      --text: #142333;
-      --muted: #697586;
-      --border: #e4eaf0;
-      --success: #16824d;
-      --success-bg: #e8f7ef;
-      --warning: #a96b00;
-      --warning-bg: #fff4d8;
-      --danger: #b42318;
-      --danger-bg: #fdecec;
-      --shadow: 0 12px 35px rgba(11, 53, 85, 0.08);
-      --radius: 18px;
-    }
+    /* =========================
+       RESET
+    ========================== */
 
     * {
       box-sizing: border-box;
@@ -44,19 +32,64 @@
 
     body {
       font-family: Tahoma, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #f5f8fc;
+      color: #142333;
       line-height: 1.7;
     }
 
     button,
     input,
     select {
-      font: inherit;
+      font-family: inherit;
+    }
+
+    button {
+      cursor: pointer;
     }
 
     a {
       text-decoration: none;
+    }
+
+    /* =========================
+       VARIABLES
+    ========================== */
+
+    :root {
+      --primary: #073653;
+      --primary2: #0d5f91;
+      --blue: #1686c4;
+      --gold: #f4c64e;
+      --gold-dark: #dcae31;
+
+      --bg: #f5f8fc;
+      --white: #ffffff;
+
+      --text: #172b3d;
+      --muted: #718096;
+
+      --border: #e3eaf1;
+
+      --green: #16824d;
+      --green-bg: #e7f7ef;
+
+      --orange: #a96800;
+      --orange-bg: #fff4d7;
+
+      --red: #b42318;
+      --red-bg: #fdebea;
+
+      --shadow: 0 10px 30px rgba(7, 54, 83, 0.08);
+      --radius: 18px;
+    }
+
+    /* =========================
+       CONTAINER
+    ========================== */
+
+    .container {
+      width: min(1180px, calc(100% - 30px));
+      margin: auto;
     }
 
     /* =========================
@@ -65,30 +98,44 @@
 
     header {
       background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.10), transparent 25%),
-        radial-gradient(circle at 80% 10%, rgba(244,198,78,.15), transparent 20%),
-        linear-gradient(135deg, #082b47 0%, #0d4d79 55%, #126ca4 100%);
-      color: #fff;
-      position: relative;
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(255,255,255,.12),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(244,198,78,.16),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          #062b46 0%,
+          #0b4f78 55%,
+          #0e71aa 100%
+        );
+
+      color: white;
       overflow: hidden;
     }
 
-    .container {
-      width: min(1180px, calc(100% - 32px));
-      margin: auto;
-    }
+    /* =========================
+       NAVBAR
+    ========================== */
 
     .navbar {
-      min-height: 80px;
+      min-height: 78px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 20px;
     }
 
     .brand {
-      color: #fff;
-      font-size: 24px;
+      color: white;
+      font-size: 23px;
       font-weight: 900;
       white-space: nowrap;
     }
@@ -99,8 +146,8 @@
 
     .nav-links {
       display: flex;
-      gap: 24px;
       align-items: center;
+      gap: 24px;
     }
 
     .nav-links a {
@@ -113,29 +160,38 @@
       color: var(--gold);
     }
 
+    /* =========================
+       HERO
+    ========================== */
+
     .hero {
-      padding: 62px 0 85px;
       text-align: center;
+      padding: 65px 0 80px;
     }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.16);
+      display: inline-block;
+
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+
+      color: var(--gold);
+
+      padding: 7px 15px;
+      border-radius: 50px;
+
       font-size: 13px;
+      font-weight: bold;
+
       margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.15;
-      max-width: 900px;
-      margin: auto;
+      font-size: clamp(30px, 6vw, 55px);
+      line-height: 1.2;
       font-weight: 900;
+
+      margin-bottom: 18px;
     }
 
     .hero h1 span {
@@ -143,89 +199,65 @@
     }
 
     .hero p {
-      max-width: 760px;
-      margin: 18px auto 30px;
-      color: rgba(255,255,255,.80);
+      color: rgba(255,255,255,.86);
+
+      max-width: 700px;
+      margin: auto;
+
       font-size: 17px;
     }
 
+    /* =========================
+       SEARCH
+    ========================== */
+
     .search-box {
-      max-width: 850px;
-      margin: auto;
-      background: #fff;
-      border-radius: 18px;
-      padding: 9px;
+      width: min(800px, 100%);
+      margin: 32px auto 0;
+
+      background: white;
+
+      padding: 8px;
+
+      border-radius: 16px;
+
       display: flex;
-      gap: 8px;
-      box-shadow: 0 20px 50px rgba(0,0,0,.18);
+
+      box-shadow: 0 15px 40px rgba(0,0,0,.18);
     }
 
     .search-box input {
       flex: 1;
-      min-width: 0;
+
       border: 0;
       outline: 0;
+
+      padding: 15px;
+
       color: var(--text);
-      padding: 15px 16px;
-      font-size: 16px;
-      background: transparent;
+
+      font-size: 15px;
+      min-width: 0;
     }
 
-    .search-btn {
+    .search-box button {
       border: 0;
-      cursor: pointer;
+
       background: var(--gold);
-      color: #142333;
+      color: #17354c;
+
+      padding: 0 28px;
+
+      border-radius: 11px;
+
       font-weight: 900;
-      border-radius: 12px;
-      padding: 0 24px;
+
       transition: .2s;
     }
 
-    .search-btn:hover {
-      background: #ffd66b;
+    .search-box button:hover {
+      background: var(--gold-dark);
       transform: translateY(-1px);
-    }
-
-    /* =========================
-       QUICK STATS
-    ========================== */
-
-    .stats-wrap {
-      margin-top: -38px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .stats {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      overflow: hidden;
-    }
-
-    .stat {
-      padding: 22px 15px;
-      text-align: center;
-      border-left: 1px solid var(--border);
-    }
-
-    .stat:last-child {
-      border-left: 0;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      color: var(--primary);
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 13px;
     }
 
     /* =========================
@@ -233,26 +265,31 @@
     ========================== */
 
     main {
-      padding: 55px 0 80px;
+      padding: 55px 0 70px;
     }
 
-    .section-head {
+    /* =========================
+       SECTION TITLE
+    ========================== */
+
+    .section-title {
       display: flex;
+      align-items: center;
       justify-content: space-between;
+
       gap: 15px;
-      align-items: end;
-      margin-bottom: 24px;
+
+      margin-bottom: 22px;
     }
 
-    .section-head h2 {
-      font-size: 28px;
+    .section-title h2 {
+      font-size: 24px;
       color: var(--primary);
     }
 
-    .section-head p {
+    .section-title p {
       color: var(--muted);
       font-size: 14px;
-      margin-top: 5px;
     }
 
     /* =========================
@@ -260,23 +297,863 @@
     ========================== */
 
     .filters {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr 1fr auto;
-      gap: 12px;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 13px;
+
       margin-bottom: 35px;
+    }
+
+    .filter-btn {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 18px 12px;
+
+      color: var(--text);
+
+      font-weight: bold;
+
+      transition: .2s;
+
+      box-shadow: 0 4px 15px rgba(0,0,0,.03);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--primary2);
+      background: #eef7fd;
+      color: var(--primary2);
+      transform: translateY(-2px);
+    }
+
+    .filter-icon {
+      display: block;
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    /* =========================
+       SCHOLARSHIP GRID
+    ========================== */
+
+    .scholarship-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 20px;
+    }
+
+    /* =========================
+       CARD
+    ========================== */
+
+    .card {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      padding: 22px;
+
+      box-shadow: var(--shadow);
+
+      transition: .25s;
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 330px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 18px 40px rgba(7,54,83,.13);
+    }
+
+    .card-top {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 10px;
+
+      margin-bottom: 18px;
+    }
+
+    .status {
+      padding: 5px 10px;
+
+      border-radius: 50px;
+
+      font-size: 11px;
+
+      font-weight: bold;
+    }
+
+    .status.open {
+      background: var(--green-bg);
+      color: var(--green);
+    }
+
+    .status.soon {
+      background: var(--orange-bg);
+      color: var(--orange);
+    }
+
+    .status.closed {
+      background: var(--red-bg);
+      color: var(--red);
+    }
+
+    .category {
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+
+      color: var(--primary);
+
+      margin-bottom: 15px;
+
+      line-height: 1.5;
+    }
+
+    .info {
+      display: grid;
+
+      gap: 8px;
+
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 8px;
+
+      font-size: 13px;
+
+      color: #536273;
+    }
+
+    .info-row strong {
+      color: var(--text);
+    }
+
+    .card-footer {
+      margin-top: auto;
+    }
+
+    .details-btn {
+      width: 100%;
+
+      border: 0;
+
+      background: var(--primary);
+
+      color: white;
+
+      padding: 13px;
+
+      border-radius: 11px;
+
+      font-weight: bold;
+
+      transition: .2s;
+    }
+
+    .details-btn:hover {
+      background: var(--primary2);
+    }
+
+    /* =========================
+       EMPTY
+    ========================== */
+
+    .empty {
+      display: none;
+
+      background: white;
+
+      border: 1px dashed #cbd5df;
+
+      padding: 45px 20px;
+
+      text-align: center;
+
+      border-radius: 18px;
+
+      color: var(--muted);
+
+      margin-top: 20px;
+    }
+
+    .empty-icon {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       FEATURES
+    ========================== */
+
+    .features {
+      margin-top: 65px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .feature {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 25px;
+
+      text-align: center;
+
       box-shadow: var(--shadow);
     }
 
-    .field label {
-      display: block;
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 7px;
-      font-weight: 700;
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
-    .field select {
+    .feature h3 {
+      color: var(--primary);
+
+      font-size: 17px;
+
+      margin-bottom: 7px;
+    }
+
+    .feature p {
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #062c45;
+
+      color: white;
+
+      padding: 35px 0;
+
+      text-align: center;
+    }
+
+    footer h3 {
+      color: var(--gold);
+
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.7);
+
+      font-size: 13px;
+    }
+
+    .footer-copy {
+      margin-top: 15px;
+
+      font-size: 12px;
+
+      color: rgba(255,255,255,.5);
+    }
+
+    /* =========================
+       MODAL
+    ========================== */
+
+    .modal {
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(0,0,0,.6);
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+
+      z-index: 999;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(600px, 100%);
+
+      background: white;
+
+      border-radius: 20px;
+
+      padding: 25px;
+
+      position: relative;
+
+      max-height: 90vh;
+
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+
+      top: 12px;
+      left: 12px;
+
+      width: 38px;
+      height: 38px;
+
+      border: 0;
+
+      border-radius: 50%;
+
+      background: #eef2f5;
+
+      font-size: 20px;
+    }
+
+    .modal-box h2 {
+      color: var(--primary);
+
+      padding-left: 45px;
+
+      margin-bottom: 18px;
+    }
+
+    .modal-content {
+      color: #536273;
+
+      font-size: 14px;
+    }
+
+    .modal-content p {
+      margin-bottom: 12px;
+    }
+
+    .modal-list {
+      margin: 15px 0;
+
+      padding-right: 20px;
+    }
+
+    .modal-list li {
+      margin-bottom: 7px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .scholarship-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .features {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .filters {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(100% - 22px, 1180px);
+      }
+
+      .navbar {
+        min-height: 65px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 45px 0 55px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .search-box {
+        padding: 6px;
+      }
+
+      .search-box input {
+        padding: 12px 9px;
+
+        font-size: 13px;
+      }
+
+      .search-box button {
+        padding: 0 16px;
+
+        font-size: 13px;
+      }
+
+      main {
+        padding-top: 35px;
+      }
+
+      .section-title {
+        display: block;
+      }
+
+      .section-title p {
+        margin-top: 4px;
+      }
+
+      .scholarship-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .filters {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .filter-btn {
+        padding: 14px 8px;
+        font-size: 12px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header id="home">
+
+    <div class="container">
+
+      <nav class="navbar">
+
+        <a href="#home" class="brand">
+          🎓 سفير <span>المنح الدراسية</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#home">الرئيسية</a>
+          <a href="#scholarships">المنح</a>
+          <a href="#categories">التخصصات</a>
+        </div>
+
+      </nav>
+
+      <section class="hero">
+
+        <div class="hero-badge">
+          🚀 فرص جديدة تُضاف باستمرار
+        </div>
+
+        <h1>
+          اكتشف <span>منحتك القادمة</span>
+        </h1>
+
+        <p>
+          دليلك لاكتشاف المنح الدراسية والفرص التعليمية
+          والجامعات في مصر والوطن العربي.
+        </p>
+
+        <div class="search-box">
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="ابحث عن منحة أو جامعة أو تخصص..."
+            autocomplete="off"
+          >
+
+          <button id="searchBtn">
+            بحث
+          </button>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <main>
+
+    <div class="container">
+
+      <!-- CATEGORIES -->
+
+      <section id="categories">
+
+        <div class="section-title">
+
+          <div>
+            <h2>تصفح حسب التخصص</h2>
+
+            <p>
+              اختر تخصصك للوصول إلى المنح المناسبة
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="filters">
+
+          <button
+            class="filter-btn active"
+            data-filter="all"
+          >
+            <span class="filter-icon">🎓</span>
+            كل المنح
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="طب بشري"
+          >
+            <span class="filter-icon">🩺</span>
+            طب بشري
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="صيدلة"
+          >
+            <span class="filter-icon">💊</span>
+            صيدلة
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="هندسة"
+          >
+            <span class="filter-icon">⚙️</span>
+            هندسة
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="حاسبات"
+          >
+            <span class="filter-icon">💻</span>
+            حاسبات وذكاء اصطناعي
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="علوم"
+          >
+            <span class="filter-icon">🔬</span>
+            علوم
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="إدارة"
+          >
+            <span class="filter-icon">📊</span>
+            إدارة وأعمال
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="أخرى"
+          >
+            <span class="filter-icon">📚</span>
+            تخصصات أخرى
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- SCHOLARSHIPS -->
+
+      <section id="scholarships">
+
+        <div class="section-title">
+
+          <div>
+            <h2>
+              🟢 المنح المفتوحة الآن
+            </h2>
+
+            <p id="resultsCount">
+              منح متاحة للتقديم
+            </p>
+          </div>
+
+        </div>
+
+
+        <div
+          class="scholarship-grid"
+          id="scholarshipGrid"
+        >
+
+          <!-- CARD 1 -->
+
+          <article
+            class="card scholarship-card"
+            data-category="طب بشري"
+            data-search="منحة دراسية كاملة جامعة باديا طب بشري طب جامعة باديا"
+          >
+
+            <div class="card-top">
+
+              <span class="status open">
+                ● مفتوحة
+              </span>
+
+              <span class="category">
+                طب بشري
+              </span>
+
+            </div>
+
+            <h3>
+              منحة دراسية كاملة
+            </h3>
+
+            <div class="info">
+
+              <div class="info-row">
+                🏛️
+                <span>
+                  الجامعة:
+                  <strong>جامعة باديا</strong>
+                </span>
+              </div>
+
+              <div class="info-row">
+                🩺
+                <span>
+                  التخصص:
+                  <strong>طب وتخصصات أخرى</strong>
+                </span>
+              </div>
+
+              <div class="info-row">
+                💰
+                <span>
+                  التمويل:
+                  <strong>منحة كاملة</strong>
+                </span>
+              </div>
+
+            </div>
+
+            <div class="card-footer">
+
+              <button
+                class="details-btn"
+                data-title="منحة جامعة باديا"
+                data-description="منحة دراسية توفر فرصة للطلاب المتميزين للدراسة في جامعة باديا."
+                data-info="يمكنك إضافة شروط التقديم والرابط الرسمي للمنحة هنا."
+              >
+                عرض تفاصيل المنحة
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- CARD 2 -->
+
+          <article
+            class="card scholarship-card"
+            data-category="هندسة"
+            data-search="منحة جامعية هندسة جامعة مصرية منحة هندسة"
+          >
+
+            <div class="card-top">
+
+              <span class="status open">
+                ● مفتوحة
+              </span>
+
+              <span class="category">
+                هندسة
+              </span>
+
+            </div>
+
+            <h3>
+              منحة جامعية
+            </h3>
+
+            <div class="info">
+
+              <div class="info-row">
+                🏛️
+                <span>
+                  الجامعة:
+                  <strong>جامعة مصرية</strong>
+                </span>
+              </div>
+
+              <div class="info-row">
+                ⚙️
+                <span>
+                  التخصص:
+                  <strong>هندسة</strong>
+                </span>
+              </div>
+
+              <div class="info-row">
+                💰
+                <span>
+                  التمويل:
+                  <strong>حسب البرنامج</strong>
+                </span>
+              </div>
+
+            </div>
+
+            <div class="card-footer">
+
+              <button
+                class="details-btn"
+                data-title="منحة جامعية - هندسة"
+                data-description="فرصة دراسية للطلاب الراغبين في دراسة الهندسة."
+                data-info="يمكنك إضافة شروط المنحة وموعد التقديم والرابط الرسمي هنا."
+              >
+                عرض تفاصيل المنحة
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- CARD 3 -->
+
+          <article
+            class="card scholarship-card"
+            data-category="حاسبات"
+            data-search="منحة حاسبات ذكاء اصطناعي جامعة منحة حاسبات"
+          >
+
+            <div class="card-top">
+
+              <span class="status soon">
+                ● قريبًا
+              </span>
+
+              <span class="category">
+                حاسبات وذكاء اصطناعي
+              </span>
+
+            </div>
+
+            <h3>
+              منحة حاسبات وذكاء اصطناعي
+            </h3>
+
+            <div class="info">
+
+              <div class="info-row">
+                🏛️
+                <span>
+                  الجامعة:
+                  <strong>جامعة مصرية</strong>
+                </span>
+              </div>
+
+              <div class="info-row">
+                💻
+                <span>
+                  التخصص:
+                  <strong>حاسبات وذكاء اصطناعي</strong>
+                </span>
+              </div>
+
+              <div class="info-row">
+                📅
+                <span>
+                  التقديم:
+                  <strong>يفتح قريبًا</strong>
+                </span>
+              </div>
+
+            </div>
+
+            <div class="card-footer">
+
+              <button
+                class="details-btn"
+                data-title="منحة حاسبات وذكاء اصطناعي"
+          
