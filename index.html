@@ -4,26 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>سفير المنح الدراسية | اكتشف منحتك القادمة</title>
+<title>سفير المنح الدراسية | اكتشف فرصتك</title>
 
-<meta name="description" content="سفير المنح الدراسية - منصة عربية لاكتشاف المنح الدراسية والفرص التعليمية والجامعات.">
+<meta name="description"
+content="سفير المنح الدراسية - دليلك لاكتشاف المنح الدراسية والفرص التعليمية والجامعات في مصر والوطن العربي.">
 
 <style>
 :root{
-  --primary:#073b5c;
-  --primary2:#0877a8;
-  --gold:#f4c64e;
-  --gold2:#d9a72f;
-  --bg:#f5f8fc;
+  --primary:#063b5c;
+  --primary2:#087ca8;
+  --gold:#f5c542;
+  --bg:#f4f8fc;
   --white:#fff;
-  --text:#142333;
+  --text:#173044;
   --muted:#718096;
-  --border:#e4eaf0;
-  --green:#16824d;
-  --green-bg:#e8f7ef;
-  --orange:#a96b00;
-  --orange-bg:#fff4d8;
-  --shadow:0 12px 35px rgba(7,59,92,.09);
+  --border:#e4ebf2;
+  --green:#159447;
+  --greenbg:#e7f7ee;
+  --orange:#c17a00;
+  --orangebg:#fff4d8;
+  --red:#c62828;
+  --shadow:0 10px 30px rgba(6,59,92,.09);
   --radius:18px;
 }
 
@@ -44,28 +45,33 @@ body{
   line-height:1.7;
 }
 
-button,input,select{
-  font:inherit;
+button,
+input,
+select{
+  font-family:inherit;
 }
 
 button{
   cursor:pointer;
 }
 
-.container{
-  width:min(1180px,calc(100% - 30px));
-  margin:auto;
+a{
+  text-decoration:none;
 }
 
 /* HEADER */
 
 header{
   background:
-  radial-gradient(circle at 15% 20%,rgba(255,255,255,.10),transparent 25%),
-  radial-gradient(circle at 85% 10%,rgba(244,198,78,.16),transparent 22%),
-  linear-gradient(135deg,#062b45,#07557e 55%,#0782b5);
+  radial-gradient(circle at 15% 15%,rgba(255,255,255,.1),transparent 25%),
+  radial-gradient(circle at 85% 10%,rgba(245,197,66,.15),transparent 20%),
+  linear-gradient(135deg,#052d48,#075b82,#0783b1);
   color:white;
-  overflow:hidden;
+}
+
+.container{
+  width:min(1180px,calc(100% - 30px));
+  margin:auto;
 }
 
 .navbar{
@@ -80,52 +86,49 @@ header{
   color:white;
   font-size:23px;
   font-weight:900;
-  text-decoration:none;
 }
 
 .logo span{
   color:var(--gold);
 }
 
-.nav-links{
+.nav{
   display:flex;
   gap:25px;
 }
 
-.nav-links a{
+.nav a{
   color:white;
-  text-decoration:none;
   font-size:14px;
-  opacity:.92;
+  opacity:.9;
 }
 
-.nav-links a:hover{
+.nav a:hover{
   color:var(--gold);
 }
 
 /* HERO */
 
 .hero{
-  padding:45px 0 70px;
   text-align:center;
+  padding:65px 15px 75px;
 }
 
 .badge{
   display:inline-block;
-  background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.18);
-  color:#fff;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.15);
   padding:7px 15px;
-  border-radius:50px;
+  border-radius:30px;
+  color:#ffe17b;
   font-size:13px;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:clamp(32px,5vw,56px);
+  font-size:clamp(32px,6vw,55px);
   line-height:1.25;
-  margin-bottom:15px;
-  font-weight:900;
+  margin-bottom:18px;
 }
 
 .hero h1 span{
@@ -133,23 +136,22 @@ header{
 }
 
 .hero p{
-  max-width:700px;
-  margin:0 auto 30px;
   color:rgba(255,255,255,.88);
+  max-width:700px;
+  margin:auto;
   font-size:16px;
 }
 
 /* SEARCH */
 
 .search-box{
-  max-width:850px;
-  margin:auto;
   background:white;
-  padding:8px;
-  border-radius:18px;
+  max-width:850px;
+  margin:30px auto 0;
+  padding:7px;
+  border-radius:17px;
   display:flex;
-  gap:8px;
-  box-shadow:0 15px 40px rgba(0,0,0,.16);
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
 .search-box input{
@@ -157,186 +159,187 @@ header{
   border:0;
   outline:0;
   padding:16px;
+  font-size:15px;
   color:var(--text);
-  background:white;
+  min-width:0;
 }
 
 .search-box button{
   border:0;
   background:var(--gold);
-  color:#18344a;
-  font-weight:900;
+  color:#173044;
+  font-weight:bold;
   padding:0 27px;
   border-radius:12px;
 }
 
-.search-box button:hover{
-  background:#ffd96a;
-}
-
-/* MAIN */
+/* CONTENT */
 
 main{
-  padding:45px 0 80px;
+  padding:45px 0 70px;
 }
 
 .section-title{
-  margin-bottom:22px;
+  margin-bottom:20px;
 }
 
 .section-title h2{
   font-size:25px;
-  margin-bottom:3px;
 }
 
 .section-title p{
   color:var(--muted);
-  font-size:14px;
+  font-size:13px;
 }
 
 /* FILTERS */
 
 .filters{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:14px;
-  margin-bottom:35px;
-}
-
-.filter{
   background:white;
   border:1px solid var(--border);
-  border-radius:14px;
-  padding:12px 15px;
+  border-radius:var(--radius);
+  padding:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  box-shadow:var(--shadow);
+  margin-bottom:35px;
 }
 
 .filter label{
   display:block;
-  font-size:12px;
   color:var(--muted);
-  margin-bottom:5px;
+  font-size:12px;
+  margin-bottom:7px;
 }
 
 .filter select{
   width:100%;
-  border:0;
-  outline:0;
-  background:white;
+  border:1px solid var(--border);
+  background:#fff;
+  padding:13px;
+  border-radius:11px;
+  outline:none;
   color:var(--text);
 }
 
 /* RESULTS */
 
-.results-info{
+.results-head{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:10px;
   margin-bottom:18px;
 }
 
-.results-count{
+.results-head h2{
+  font-size:24px;
+}
+
+.count{
   color:var(--muted);
-  font-size:14px;
+  font-size:13px;
 }
-
-.clear-btn{
-  border:0;
-  background:transparent;
-  color:var(--primary2);
-  font-weight:bold;
-}
-
-/* CARDS */
 
 .scholarships{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:18px;
 }
+
+/* CARD */
 
 .card{
   background:white;
   border:1px solid var(--border);
   border-radius:var(--radius);
   padding:20px;
-  box-shadow:0 8px 25px rgba(7,59,92,.05);
+  box-shadow:var(--shadow);
   transition:.25s;
   display:flex;
   flex-direction:column;
-  min-height:340px;
+  min-height:330px;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--shadow);
+  transform:translateY(-4px);
+  box-shadow:0 16px 35px rgba(6,59,92,.13);
 }
 
 .card-top{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:10px;
-  margin-bottom:14px;
+  margin-bottom:18px;
 }
 
 .status{
   padding:5px 10px;
-  border-radius:50px;
+  border-radius:20px;
   font-size:11px;
   font-weight:bold;
 }
 
-.status.open{
-  background:var(--green-bg);
+.open{
+  background:var(--greenbg);
   color:var(--green);
 }
 
-.status.soon{
-  background:var(--orange-bg);
+.partial{
+  background:var(--orangebg);
   color:var(--orange);
 }
 
-.category{
+.closed{
+  background:#fdecec;
+  color:var(--red);
+}
+
+.type{
   color:var(--muted);
-  font-size:12px;
+  font-size:11px;
 }
 
 .card h3{
-  font-size:19px;
-  margin-bottom:13px;
+  font-size:18px;
+  margin-bottom:12px;
+  color:#0b4565;
 }
 
 .info{
   display:grid;
   gap:8px;
-  color:#526171;
-  font-size:13px;
   margin-bottom:18px;
+}
+
+.info div{
+  font-size:12px;
+  color:#607080;
 }
 
 .info strong{
   color:var(--text);
 }
 
-.card-bottom{
+.card-buttons{
   margin-top:auto;
-  display:flex;
+  display:grid;
+  grid-template-columns:1fr 1fr;
   gap:8px;
 }
 
-.details-btn,
-.apply-btn{
-  flex:1;
+.btn{
   border:0;
-  padding:11px;
   border-radius:10px;
+  padding:11px 8px;
   font-weight:bold;
+  font-size:12px;
 }
 
 .details-btn{
-  background:#eef5f9;
-  color:var(--primary);
+  background:#edf5f9;
+  color:#07567b;
 }
 
 .apply-btn{
@@ -345,121 +348,160 @@ main{
 }
 
 .apply-btn:hover{
-  background:#0a4c73;
+  background:#07557e;
 }
 
-/* EMPTY */
-
-.empty{
-  display:none;
-  text-align:center;
-  padding:50px 20px;
+.no-results{
   background:white;
-  border-radius:var(--radius);
-  border:1px solid var(--border);
-}
-
-.empty .icon{
-  font-size:45px;
-  margin-bottom:10px;
+  padding:45px;
+  text-align:center;
+  border-radius:18px;
+  color:var(--muted);
+  grid-column:1/-1;
 }
 
 /* MODAL */
 
 .modal{
-  display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.65);
-  z-index:999;
+  background:rgba(0,0,0,.6);
+  z-index:1000;
+  display:none;
+  align-items:center;
+  justify-content:center;
   padding:20px;
-  overflow:auto;
 }
 
 .modal.active{
   display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
 .modal-box{
-  width:min(700px,100%);
   background:white;
+  width:min(650px,100%);
+  max-height:90vh;
+  overflow:auto;
   border-radius:22px;
   padding:25px;
   position:relative;
-  max-height:90vh;
-  overflow:auto;
+  box-shadow:0 20px 70px rgba(0,0,0,.25);
 }
 
 .close{
   position:absolute;
-  left:18px;
-  top:15px;
+  top:12px;
+  left:15px;
+  width:35px;
+  height:35px;
   border:0;
-  background:#f1f4f7;
-  width:38px;
-  height:38px;
   border-radius:50%;
+  background:#f1f4f7;
   font-size:20px;
 }
 
 .modal h2{
   color:var(--primary);
-  margin-bottom:15px;
-  padding-left:45px;
-}
-
-.modal-section{
-  margin-top:20px;
-}
-
-.modal-section h3{
   margin-bottom:8px;
-  color:var(--primary);
+  padding-left:40px;
 }
 
-.modal-section ul{
-  padding-right:20px;
+.modal-sub{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.detail-list{
+  display:grid;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.detail-item{
+  background:#f7fafc;
+  border-radius:12px;
+  padding:12px;
+}
+
+.detail-item strong{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.detail-item span{
+  font-size:14px;
+}
+
+.modal-actions{
+  display:flex;
+  gap:10px;
+}
+
+.modal-actions a{
+  flex:1;
+  text-align:center;
+  padding:13px;
+  border-radius:11px;
+  font-weight:bold;
+  font-size:13px;
 }
 
 .modal-apply{
-  display:block;
-  text-align:center;
-  margin-top:25px;
-  padding:13px;
-  border-radius:12px;
-  background:var(--gold);
-  color:#17344a;
-  font-weight:900;
-  text-decoration:none;
+  background:var(--primary);
+  color:white;
+}
+
+.modal-close{
+  background:#edf4f8;
+  color:var(--primary);
+  cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-  background:#062b45;
+  background:#032f4a;
   color:white;
+  padding:35px 0;
   text-align:center;
-  padding:28px 15px;
 }
 
-footer strong{
+.footer-logo{
   color:var(--gold);
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:8px;
 }
 
 footer p{
-  font-size:13px;
-  opacity:.85;
-  margin-top:5px;
+  color:rgba(255,255,255,.7);
+  font-size:12px;
 }
 
-/* RESPONSIVE */
+.footer-links{
+  margin:15px 0;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.footer-links a{
+  color:white;
+  font-size:12px;
+}
+
+/* MOBILE */
 
 @media(max-width:850px){
 
-  .nav-links{
-    gap:13px;
+  .nav{
+    gap:12px;
+  }
+
+  .nav a{
+    font-size:11px;
   }
 
   .scholarships{
@@ -467,7 +509,7 @@ footer p{
   }
 
   .filters{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
   }
 }
 
@@ -482,19 +524,19 @@ footer p{
   }
 
   .logo{
-    font-size:18px;
+    font-size:16px;
   }
 
-  .nav-links{
+  .nav{
     gap:10px;
   }
 
-  .nav-links a{
-    font-size:11px;
+  .nav a{
+    font-size:10px;
   }
 
   .hero{
-    padding:35px 0 50px;
+    padding:45px 8px 55px;
   }
 
   .hero h1{
@@ -506,22 +548,17 @@ footer p{
   }
 
   .search-box{
-    border-radius:14px;
+    margin-top:25px;
   }
 
   .search-box input{
-    min-width:0;
-    padding:13px 9px;
     font-size:12px;
+    padding:13px 10px;
   }
 
   .search-box button{
-    padding:0 16px;
+    padding:0 15px;
     font-size:12px;
-  }
-
-  .filters{
-    grid-template-columns:1fr;
   }
 
   .scholarships{
@@ -529,11 +566,15 @@ footer p{
   }
 
   .card{
-    min-height:0;
+    min-height:300px;
   }
 
-  .results-info{
-    align-items:flex-start;
+  .results-head h2{
+    font-size:20px;
+  }
+
+  .modal-box{
+    padding:20px 15px;
   }
 }
 </style>
@@ -551,59 +592,54 @@ footer p{
         🎓 سفير <span>المنح الدراسية</span>
       </a>
 
-      <div class="nav-links">
+      <div class="nav">
         <a href="#home">الرئيسية</a>
         <a href="#scholarships">المنح</a>
-        <a href="#specializations">التخصصات</a>
+        <a href="#categories">التخصصات</a>
       </div>
 
     </nav>
 
-    <section class="hero" id="home">
-
-      <div class="badge">
-        🚀 فرص جديدة تساعدك على تحقيق حلمك
-      </div>
-
-      <h1>
-        اكتشف <span>منحتك القادمة</span>
-      </h1>
-
-      <p>
-        ابحث عن المنح الدراسية والفرص التعليمية والجامعات المناسبة لك
-        في مكان واحد.
-      </p>
-
-      <div class="search-box">
-
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="ابحث باسم المنحة أو الجامعة أو التخصص..."
-        >
-
-        <button onclick="filterScholarships()">
-          🔎 بحث
-        </button>
-
-      </div>
-
-    </section>
-
   </div>
+
+  <section class="hero" id="home">
+
+    <div class="badge">🚀 فرص جديدة تساعدك تحقق حلمك</div>
+
+    <h1>
+      اكتشف <span>منحتك القادمة</span>
+    </h1>
+
+    <p>
+      ابحث عن المنح الدراسية والفرص التعليمية والجامعات المناسبة لك في مكان واحد.
+    </p>
+
+    <div class="search-box">
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="ابحث باسم المنحة أو الجامعة أو التخصص..."
+      >
+
+      <button onclick="filterScholarships()">
+        🔎 بحث
+      </button>
+
+    </div>
+
+  </section>
 
 </header>
 
 
-<main>
+<main class="container">
 
-<div class="container">
-
-  <section id="specializations">
+  <section id="categories">
 
     <div class="section-title">
 
-      <h2>🎓 تصفح حسب التخصص</h2>
+      <h2>🎓 تصفح المنح حسب التخصص</h2>
 
       <p>
         استخدم الفلاتر للوصول للمنحة المناسبة لك بسرعة.
@@ -617,25 +653,27 @@ footer p{
 
         <label>التخصص</label>
 
-        <select id="specializationFilter" onchange="filterScholarships()">
+        <select id="specialtyFilter" onchange="filterScholarships()">
 
           <option value="all">كل التخصصات</option>
 
-          <option value="طب بشري">🩺 طب بشري</option>
+          <option value="طب بشري">طب بشري</option>
 
-          <option value="صيدلة">💊 صيدلة</option>
+          <option value="صيدلة">صيدلة</option>
 
-          <option value="هندسة">⚙️ هندسة</option>
+          <option value="هندسة">هندسة</option>
+
+          <option value="علوم">علوم</option>
+
+          <option value="إدارة وأعمال">إدارة وأعمال</option>
 
           <option value="حاسبات وذكاء اصطناعي">
-            💻 حاسبات وذكاء اصطناعي
+            حاسبات وذكاء اصطناعي
           </option>
 
-          <option value="علوم">🔬 علوم</option>
-
-          <option value="إدارة وأعمال">📊 إدارة وأعمال</option>
-
-          <option value="تخصصات أخرى">📚 تخصصات أخرى</option>
+          <option value="تخصصات أخرى">
+            تخصصات أخرى
+          </option>
 
         </select>
 
@@ -650,9 +688,9 @@ footer p{
 
           <option value="all">كل أنواع التمويل</option>
 
-          <option value="كاملة">💰 منحة كاملة</option>
+          <option value="كاملة">منحة كاملة</option>
 
-          <option value="جزئية">💵 منحة جزئية</option>
+          <option value="جزئية">منحة جزئية</option>
 
         </select>
 
@@ -667,9 +705,11 @@ footer p{
 
           <option value="all">كل الحالات</option>
 
-          <option value="مفتوحة">🟢 مفتوحة الآن</option>
+          <option value="مفتوحة">مفتوحة الآن</option>
 
-          <option value="قريبًا">🟡 تفتح قريبًا</option>
+          <option value="قريبًا">تفتح قريبًا</option>
+
+          <option value="مغلقة">مغلقة</option>
 
         </select>
 
@@ -682,77 +722,133 @@ footer p{
 
   <section id="scholarships">
 
-    <div class="results-info">
+    <div class="results-head">
 
       <div>
 
-        <div class="section-title" style="margin-bottom:0">
-          <h2>🟢 المنح المتاحة</h2>
-        </div>
+        <h2>🟢 المنح المتاحة الآن</h2>
 
-        <div class="results-count" id="resultsCount">
-          جاري تحميل المنح...
-        </div>
+        <span class="count" id="resultCount">
+          جاري التحميل...
+        </span>
 
       </div>
 
-      <button class="clear-btn" onclick="clearFilters()">
-        إعادة ضبط الفلاتر
-      </button>
-
     </div>
 
 
-    <div class="scholarships" id="scholarshipsContainer"></div>
-
-
-    <div class="empty" id="emptyState">
-
-      <div class="icon">🔎</div>
-
-      <h3>لم نجد منحًا مطابقة</h3>
-
-      <p>
-        جرّب تغيير كلمة البحث أو الفلاتر.
-      </p>
-
-    </div>
+    <div class="scholarships" id="scholarshipContainer"></div>
 
   </section>
-
-</div>
 
 </main>
 
 
 <footer>
 
-  <strong>🎓 سفير المنح الدراسية</strong>
+  <div class="container">
 
-  <p>
-    دليلك لاكتشاف المنح والفرص التعليمية والجامعات
-  </p>
+    <div class="footer-logo">
+      🎓 سفير المنح الدراسية
+    </div>
 
-  <p>
-    © 2026 جميع الحقوق محفوظة
-  </p>
+    <p>
+      دليلك لاكتشاف المنح والفرص التعليمية والجامعات.
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#home">الرئيسية</a>
+      <a href="#scholarships">المنح</a>
+      <a href="#categories">التخصصات</a>
+
+    </div>
+
+    <p>
+      © 2026 جميع الحقوق محفوظة
+    </p>
+
+  </div>
 
 </footer>
 
 
 <!-- MODAL -->
 
-<div class="modal" id="modal">
+<div class="modal" id="detailsModal">
 
   <div class="modal-box">
 
-    <button class="close" onclick="closeModal()">
-      ×
-    </button>
+    <button class="close" onclick="closeModal()">×</button>
 
     <h2 id="modalTitle"></h2>
 
-    <div id="modalContent"></div>
+    <p class="modal-sub" id="modalDescription"></p>
+
+    <div class="detail-list">
+
+      <div class="detail-item">
+
+        <strong>🏛️ الجامعة / الجهة</strong>
+
+        <span id="modalUniversity"></span>
+
+      </div>
+
+      <div class="detail-item">
+
+        <strong>🎓 التخصص</strong>
+
+        <span id="modalSpecialty"></span>
+
+      </div>
+
+      <div class="detail-item">
+
+        <strong>💰 التمويل</strong>
+
+        <span id="modalFunding"></span>
+
+      </div>
+
+      <div class="detail-item">
+
+        <strong>📅 الموعد</strong>
+
+        <span id="modalDeadline"></span>
+
+      </div>
+
+      <div class="detail-item">
+
+        <strong>📍 الدولة</strong>
+
+        <span id="modalCountry"></span>
+
+      </div>
+
+    </div>
+
+    <div class="modal-actions">
+
+      <a
+        id="modalApply"
+        class="modal-apply"
+        href="#"
+        target="_blank"
+        rel="noopener"
+      >
+        🚀 التقديم الرسمي
+      </a>
+
+      <button
+        class="modal-close"
+        onclick="closeModal()"
+      >
+        إغلاق
+      </button>
+
+    </div>
 
   </div>
 
@@ -761,288 +857,205 @@ footer p{
 
 <script>
 
-/* =========================
-   بيانات المنح
-========================= */
+/* ==========================================
+   قاعدة بيانات المنح
+   ========================================== */
 
 const scholarships = [
 
   {
     id:1,
-
-    name:"منحة دراسية كاملة",
-
+    title:"منحة دراسية كاملة",
     university:"جامعة باديا",
-
-    specialization:["طب بشري","تخصصات أخرى"],
-
+    specialty:"طب بشري",
     funding:"كاملة",
-
     status:"مفتوحة",
-
-    deadline:"يتم تحديده حسب البرنامج",
-
-    description:
-      "منحة تهدف إلى دعم الطلاب المتفوقين ومساعدتهم على الحصول على تعليم جامعي متميز.",
-
-    benefits:[
-      "إعفاء من الرسوم الدراسية حسب شروط المنحة",
-      "دعم تعليمي وأكاديمي",
-      "إمكانية دراسة عدد من التخصصات"
-    ],
-
-    apply:"#"
-
+    deadline:"حسب إعلان البرنامج",
+    country:"مصر",
+    description:"منحة دراسية توفر دعمًا كبيرًا للطلاب المستحقين.",
+    apply:"https://www.bue.edu.eg/"
   },
-
 
   {
     id:2,
-
-    name:"منحة جامعية",
-
+    title:"منحة جامعية",
     university:"جامعة مصرية",
-
-    specialization:["هندسة"],
-
+    specialty:"هندسة",
     funding:"كاملة",
-
     status:"مفتوحة",
-
     deadline:"حسب البرنامج",
-
-    description:
-      "فرصة دراسية للطلاب الراغبين في دراسة الهندسة.",
-
-    benefits:[
-      "تمويل دراسي",
-      "دعم أكاديمي",
-      "فرصة للالتحاق بالبرنامج المختار"
-    ],
-
-    apply:"#"
-
+    country:"مصر",
+    description:"فرصة للحصول على دعم دراسي للطلاب المتفوقين.",
+    apply:"https://www.google.com/"
   },
-
 
   {
     id:3,
-
-    name:"منحة حاسبات وذكاء اصطناعي",
-
+    title:"منحة حاسبات وذكاء اصطناعي",
     university:"جامعة مصرية",
-
-    specialization:["حاسبات وذكاء اصطناعي"],
-
+    specialty:"حاسبات وذكاء اصطناعي",
     funding:"جزئية",
-
     status:"قريبًا",
-
     deadline:"يعلن لاحقًا",
-
-    description:
-      "فرصة للطلاب المهتمين بمجالات الحاسبات والذكاء الاصطناعي.",
-
-    benefits:[
-      "خصم على المصروفات الدراسية",
-      "دراسة تخصصات تقنية",
-      "فرص تعليمية وتدريبية"
-    ],
-
-    apply:"#"
-
+    country:"مصر",
+    description:"فرصة تعليمية لطلاب تخصصات الحاسبات والذكاء الاصطناعي.",
+    apply:"https://www.google.com/"
   },
-
 
   {
     id:4,
-
-    name:"منحة التميز الأكاديمي",
-
+    title:"منحة إدارة وأعمال",
     university:"جامعة مصرية",
-
-    specialization:["صيدلة"],
-
+    specialty:"إدارة وأعمال",
     funding:"جزئية",
-
     status:"مفتوحة",
-
     deadline:"حسب إعلان الجامعة",
-
-    description:
-      "منحة مخصصة لدعم الطلاب المتميزين أكاديميًا.",
-
-    benefits:[
-      "خصم على المصروفات",
-      "دعم للطلاب المتفوقين",
-      "إمكانية الاستمرار وفق الشروط"
-    ],
-
-    apply:"#"
-
+    country:"مصر",
+    description:"دعم دراسي للطلاب الراغبين في دراسة إدارة الأعمال.",
+    apply:"https://www.google.com/"
   },
-
 
   {
     id:5,
-
-    name:"منحة العلوم والتكنولوجيا",
-
+    title:"منحة العلوم والتكنولوجيا",
     university:"جامعة مصرية",
-
-    specialization:["علوم"],
-
+    specialty:"علوم",
     funding:"كاملة",
-
     status:"مفتوحة",
-
     deadline:"حسب البرنامج",
-
-    description:
-      "منحة تستهدف الطلاب الراغبين في دراسة العلوم والتخصصات المرتبطة بالتكنولوجيا.",
-
-    benefits:[
-      "تغطية دراسية حسب شروط البرنامج",
-      "بيئة تعليمية متميزة",
-      "دعم أكاديمي"
-    ],
-
-    apply:"#"
-
+    country:"مصر",
+    description:"منحة مخصصة للطلاب المهتمين بمجالات العلوم والتكنولوجيا.",
+    apply:"https://www.google.com/"
   },
-
 
   {
     id:6,
-
-    name:"منحة إدارة وأعمال",
-
+    title:"منحة التميز الأكاديمي",
     university:"جامعة مصرية",
-
-    specialization:["إدارة وأعمال"],
-
+    specialty:"صيدلة",
     funding:"جزئية",
-
-    status:"قريبًا",
-
-    deadline:"يعلن لاحقًا",
-
-    description:
-      "فرصة للطلاب المهتمين بإدارة الأعمال والمجالات الإدارية.",
-
-    benefits:[
-      "خصم على المصروفات",
-      "برنامج أكاديمي متخصص",
-      "فرص تدريبية"
-    ],
-
-    apply:"#"
-
+    status:"مفتوحة",
+    deadline:"حسب إعلان الجامعة",
+    country:"مصر",
+    description:"منحة للطلاب المتميزين أكاديميًا.",
+    apply:"https://www.google.com/"
   }
 
 ];
 
 
-/* =========================
+/* ==========================================
    عرض المنح
-========================= */
+   ========================================== */
 
-const container =
-  document.getElementById("scholarshipsContainer");
+function displayScholarships(data){
 
-const resultsCount =
-  document.getElementById("resultsCount");
+  const container =
+    document.getElementById("scholarshipContainer");
 
-const emptyState =
-  document.getElementById("emptyState");
-
-
-function renderScholarships(list){
+  const count =
+    document.getElementById("resultCount");
 
   container.innerHTML = "";
 
-  if(list.length === 0){
+  count.textContent =
+    `تم العثور على ${data.length} منحة`;
 
-    emptyState.style.display = "block";
 
-    resultsCount.textContent =
-      "لا توجد نتائج مطابقة";
+  if(data.length === 0){
+
+    container.innerHTML = `
+      <div class="no-results">
+        <div style="font-size:40px;">🔍</div>
+        <h3>لم نجد منحًا مطابقة</h3>
+        <p>جرّب تغيير البحث أو الفلاتر.</p>
+      </div>
+    `;
 
     return;
-
   }
 
-  emptyState.style.display = "none";
 
-  resultsCount.textContent =
-    `تم العثور على ${list.length} منحة`;
+  data.forEach(item => {
 
-  list.forEach(s => {
+    const statusClass =
+      item.status === "مفتوحة"
+      ? "open"
+      : item.status === "قريبًا"
+      ? "partial"
+      : "closed";
+
 
     const card = document.createElement("article");
 
     card.className = "card";
 
+
     card.innerHTML = `
 
       <div class="card-top">
 
-        <span class="status ${s.status === "مفتوحة" ? "open" : "soon"}">
-          ${s.status === "مفتوحة" ? "🟢 مفتوحة" : "🟡 قريبًا"}
+        <span class="status ${statusClass}">
+          ${item.status}
         </span>
 
-        <span class="category">
-          ${s.funding === "كاملة" ? "💰 منحة كاملة" : "💵 منحة جزئية"}
+        <span class="type">
+          ${item.funding === "كاملة" ? "💰 منحة كاملة" : "💵 منحة جزئية"}
         </span>
 
       </div>
 
-      <h3>${s.name}</h3>
+
+      <h3>${item.title}</h3>
+
 
       <div class="info">
 
         <div>
-          🏛️ <strong>الجامعة:</strong>
-          ${s.university}
+          🏛️ الجامعة:
+          <strong>${item.university}</strong>
         </div>
 
         <div>
-          🎓 <strong>التخصص:</strong>
-          ${s.specialization.join("، ")}
+          🎓 التخصص:
+          <strong>${item.specialty}</strong>
         </div>
 
         <div>
-          💰 <strong>التمويل:</strong>
-          ${s.funding}
+          💰 التمويل:
+          <strong>${item.funding}</strong>
         </div>
 
         <div>
-          📅 <strong>الموعد:</strong>
-          ${s.deadline}
+          📅 الموعد:
+          <strong>${item.deadline}</strong>
         </div>
 
       </div>
 
-      <div class="card-bottom">
+
+      <div class="card-buttons">
 
         <button
-          class="details-btn"
-          onclick="showDetails(${s.id})"
+          class="btn details-btn"
+          onclick="openDetails(${item.id})"
         >
           عرض التفاصيل
         </button>
 
         <a
-          class="apply-btn"
-          href="${s.apply}"
+          class="btn apply-btn"
+          href="${item.apply}"
           target="_blank"
+          rel="noopener"
         >
-          التقديم
+          التقديم 🚀
         </a>
 
       </div>
 
     `;
+
 
     container.appendChild(card);
 
@@ -1051,9 +1064,9 @@ function renderScholarships(list){
 }
 
 
-/* =========================
-   البحث والفلترة
-========================= */
+/* ==========================================
+   البحث والفلاتر
+   ========================================== */
 
 function filterScholarships(){
 
@@ -1064,51 +1077,62 @@ function filterScholarships(){
       .trim()
       .toLowerCase();
 
-  const specialization =
-    document.getElementById("specializationFilter").value;
+
+  const specialty =
+    document
+      .getElementById("specialtyFilter")
+      .value;
+
 
   const funding =
-    document.getElementById("fundingFilter").value;
+    document
+      .getElementById("fundingFilter")
+      .value;
+
 
   const status =
-    document.getElementById("statusFilter").value;
+    document
+      .getElementById("statusFilter")
+      .value;
 
 
   const filtered =
-    scholarships.filter(s => {
+    scholarships.filter(item => {
 
-      const searchableText = (
-
-        s.name + " " +
-        s.university + " " +
-        s.specialization.join(" ")
-
-      ).toLowerCase();
+      const text =
+        `
+        ${item.title}
+        ${item.university}
+        ${item.specialty}
+        ${item.country}
+        ${item.description}
+        `
+        .toLowerCase();
 
 
       const matchesSearch =
         !search ||
-        searchableText.includes(search);
+        text.includes(search);
 
 
-      const matchesSpecialization =
-        specialization === "all" ||
-        s.specialization.includes(specialization);
+      const matchesSpecialty =
+        specialty === "all" ||
+        item.specialty === specialty;
 
 
       const matchesFunding =
         funding === "all" ||
-        s.funding === funding;
+        item.funding === funding;
 
 
       const matchesStatus =
         status === "all" ||
-        s.status === status;
+        item.status === status;
 
 
       return (
         matchesSearch &&
-        matchesSpecialization &&
+        matchesSpecialty &&
         matchesFunding &&
         matchesStatus
       );
@@ -1116,101 +1140,50 @@ function filterScholarships(){
     });
 
 
-  renderScholarships(filtered);
+  displayScholarships(filtered);
 
 }
 
 
-/* =========================
-   زر Enter للبحث
-========================= */
+/* ==========================================
+   نافذة التفاصيل
+   ========================================== */
 
-document
-  .getElementById("searchInput")
-  .addEventListener("keydown", function(e){
+function openDetails(id){
 
-    if(e.key === "Enter"){
-      filterScholarships();
-    }
+  const item =
+    scholarships.find(x => x.id === id);
 
-  });
-
-
-/* =========================
-   تفاصيل المنحة
-========================= */
-
-function showDetails(id){
-
-  const scholarship =
-    scholarships.find(s => s.id === id);
-
-  if(!scholarship) return;
+  if(!item) return;
 
 
   document.getElementById("modalTitle").textContent =
-    scholarship.name;
+    item.title;
 
+  document.getElementById("modalDescription").textContent =
+    item.description;
 
-  document.getElementById("modalContent").innerHTML = `
+  document.getElementById("modalUniversity").textContent =
+    item.university;
 
-    <p>
-      <strong>🏛️ الجامعة:</strong>
-      ${scholarship.university}
-    </p>
+  document.getElementById("modalSpecialty").textContent =
+    item.specialty;
 
-    <p>
-      <strong>🎓 التخصص:</strong>
-      ${scholarship.specialization.join("، ")}
-    </p>
+  document.getElementById("modalFunding").textContent =
+    item.funding;
 
-    <p>
-      <strong>💰 نوع التمويل:</strong>
-      ${scholarship.funding}
-    </p>
+  document.getElementById("modalDeadline").textContent =
+    item.deadline;
 
-    <p>
-      <strong>📅 الموعد النهائي:</strong>
-      ${scholarship.deadline}
-    </p>
+  document.getElementById("modalCountry").textContent =
+    item.country;
 
-    <div class="modal-section">
-
-      <h3>📋 عن المنحة</h3>
-
-      <p>
-        ${scholarship.description}
-      </p>
-
-    </div>
-
-    <div class="modal-section">
-
-      <h3>✨ أهم المميزات</h3>
-
-      <ul>
-
-        ${scholarship.benefits
-          .map(b => `<li>${b}</li>`)
-          .join("")}
-
-      </ul>
-
-    </div>
-
-    <a
-      class="modal-apply"
-      href="${scholarship.apply}"
-      target="_blank"
-    >
-      🚀 الانتقال إلى صفحة التقديم
-    </a>
-
-  `;
+  document.getElementById("modalApply").href =
+    item.apply;
 
 
   document
-    .getElementById("modal")
+    .getElementById("detailsModal")
     .classList.add("active");
 
 }
@@ -1219,17 +1192,17 @@ function showDetails(id){
 function closeModal(){
 
   document
-    .getElementById("modal")
+    .getElementById("detailsModal")
     .classList.remove("active");
 
 }
 
 
-/* إغلاق النافذة بالضغط خارجها */
+/* إغلاق النافذة عند الضغط خارجها */
 
 document
-  .getElementById("modal")
-  .addEventListener("click",function(e){
+  .getElementById("detailsModal")
+  .addEventListener("click", function(e){
 
     if(e.target === this){
       closeModal();
@@ -1238,31 +1211,18 @@ document
   });
 
 
-/* =========================
-   إعادة ضبط
-========================= */
+/* البحث أثناء الكتابة */
 
-function clearFilters(){
-
-  document.getElementById("searchInput").value = "";
-
-  document.getElementById("specializationFilter").value = "all";
-
-  document.getElementById("fundingFilter").value = "all";
-
-  document.getElementById("statusFilter").value = "all";
-
-  filterScholarships();
-
-}
+document
+  .getElementById("searchInput")
+  .addEventListener("input", filterScholarships);
 
 
-/* تشغيل أولي */
+/* تشغيل الموقع */
 
-renderScholarships(scholarships);
+displayScholarships(scholarships);
 
 </script>
 
 </body>
-            </html>
-  
+  </html>
