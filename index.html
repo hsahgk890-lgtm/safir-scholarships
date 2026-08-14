@@ -4,27 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>سفير المنح الدراسية | اكتشف فرصتك</title>
+<title>سفير المنح الدراسية | منح 2026</title>
 
 <meta name="description"
-content="سفير المنح الدراسية - دليلك لاكتشاف المنح الدراسية والفرص التعليمية والجامعات في مصر والوطن العربي.">
+content="سفير المنح الدراسية - اكتشف أحدث المنح الدراسية والفرص التعليمية في مصر.">
 
 <style>
+
 :root{
-  --primary:#063b5c;
-  --primary2:#087ca8;
-  --gold:#f5c542;
+  --primary:#063b59;
+  --primary2:#087aa3;
+  --gold:#f4c542;
+  --gold2:#d9a72f;
   --bg:#f4f8fc;
   --white:#fff;
-  --text:#173044;
-  --muted:#718096;
-  --border:#e4ebf2;
-  --green:#159447;
-  --greenbg:#e7f7ee;
-  --orange:#c17a00;
-  --orangebg:#fff4d8;
+  --text:#183142;
+  --muted:#71808d;
+  --green:#14945b;
+  --green-bg:#e8f8f0;
+  --orange:#c98200;
+  --orange-bg:#fff4d8;
   --red:#c62828;
-  --shadow:0 10px 30px rgba(6,59,92,.09);
+  --border:#e3ebf1;
+  --shadow:0 12px 35px rgba(5,48,75,.09);
   --radius:18px;
 }
 
@@ -48,25 +50,11 @@ body{
 button,
 input,
 select{
-  font-family:inherit;
+  font:inherit;
 }
 
 button{
   cursor:pointer;
-}
-
-a{
-  text-decoration:none;
-}
-
-/* HEADER */
-
-header{
-  background:
-  radial-gradient(circle at 15% 15%,rgba(255,255,255,.1),transparent 25%),
-  radial-gradient(circle at 85% 10%,rgba(245,197,66,.15),transparent 20%),
-  linear-gradient(135deg,#052d48,#075b82,#0783b1);
-  color:white;
 }
 
 .container{
@@ -74,11 +62,24 @@ header{
   margin:auto;
 }
 
+/* =========================
+   HEADER
+========================= */
+
+header{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.08),transparent 25%),
+    radial-gradient(circle at 85% 15%,rgba(244,197,66,.13),transparent 20%),
+    linear-gradient(135deg,#052d47,#056486 60%,#078db8);
+  color:white;
+  overflow:hidden;
+}
+
 .navbar{
   min-height:78px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:20px;
 }
 
@@ -99,6 +100,7 @@ header{
 
 .nav a{
   color:white;
+  text-decoration:none;
   font-size:14px;
   opacity:.9;
 }
@@ -107,28 +109,30 @@ header{
   color:var(--gold);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
+  padding:60px 0 72px;
   text-align:center;
-  padding:65px 15px 75px;
 }
 
 .badge{
   display:inline-block;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.15);
-  padding:7px 15px;
+  padding:8px 15px;
   border-radius:30px;
-  color:#ffe17b;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
   font-size:13px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .hero h1{
-  font-size:clamp(32px,6vw,55px);
+  font-size:48px;
   line-height:1.25;
-  margin-bottom:18px;
+  margin-bottom:15px;
 }
 
 .hero h1 span{
@@ -136,22 +140,20 @@ header{
 }
 
 .hero p{
-  color:rgba(255,255,255,.88);
   max-width:700px;
-  margin:auto;
-  font-size:16px;
+  margin:0 auto 28px;
+  color:rgba(255,255,255,.88);
+  font-size:17px;
 }
 
-/* SEARCH */
-
 .search-box{
+  width:min(800px,100%);
+  margin:auto;
   background:white;
-  max-width:850px;
-  margin:30px auto 0;
+  border-radius:18px;
   padding:7px;
-  border-radius:17px;
   display:flex;
-  box-shadow:0 15px 40px rgba(0,0,0,.15);
+  box-shadow:0 15px 40px rgba(0,0,0,.16);
 }
 
 .search-box input{
@@ -159,27 +161,31 @@ header{
   border:0;
   outline:0;
   padding:16px;
-  font-size:15px;
   color:var(--text);
-  min-width:0;
+  background:white;
 }
 
 .search-box button{
   border:0;
   background:var(--gold);
-  color:#173044;
-  font-weight:bold;
+  color:#173449;
   padding:0 27px;
-  border-radius:12px;
+  border-radius:13px;
+  font-weight:900;
 }
 
-/* CONTENT */
+/* =========================
+   MAIN
+========================= */
 
 main{
   padding:45px 0 70px;
 }
 
 .section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
   margin-bottom:20px;
 }
 
@@ -187,59 +193,51 @@ main{
   font-size:25px;
 }
 
+.section-title h2 span{
+  color:var(--green);
+}
+
 .section-title p{
   color:var(--muted);
   font-size:13px;
 }
 
-/* FILTERS */
+/* =========================
+   FILTERS
+========================= */
 
 .filters{
   background:white;
   border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:18px;
+  border-radius:18px;
+  padding:16px;
+  box-shadow:var(--shadow);
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  box-shadow:var(--shadow);
+  gap:12px;
   margin-bottom:35px;
 }
 
-.filter label{
+.filter-group label{
   display:block;
   color:var(--muted);
   font-size:12px;
-  margin-bottom:7px;
+  margin-bottom:6px;
 }
 
-.filter select{
+.filter-group select{
   width:100%;
   border:1px solid var(--border);
-  background:#fff;
-  padding:13px;
+  background:white;
+  padding:12px;
   border-radius:11px;
-  outline:none;
+  outline:0;
   color:var(--text);
 }
 
-/* RESULTS */
-
-.results-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:18px;
-}
-
-.results-head h2{
-  font-size:24px;
-}
-
-.count{
-  color:var(--muted);
-  font-size:13px;
-}
+/* =========================
+   SCHOLARSHIPS
+========================= */
 
 .scholarships{
   display:grid;
@@ -247,53 +245,67 @@ main{
   gap:18px;
 }
 
-/* CARD */
-
 .card{
   background:white;
   border:1px solid var(--border);
-  border-radius:var(--radius);
+  border-radius:18px;
   padding:20px;
   box-shadow:var(--shadow);
-  transition:.25s;
   display:flex;
   flex-direction:column;
-  min-height:330px;
+  min-height:370px;
+  transition:.25s;
+  position:relative;
+  overflow:hidden;
 }
 
 .card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 16px 35px rgba(6,59,92,.13);
+  transform:translateY(-5px);
+  box-shadow:0 18px 45px rgba(5,48,75,.13);
+}
+
+.card.featured{
+  border:2px solid var(--gold);
 }
 
 .card-top{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:10px;
+  gap:8px;
   margin-bottom:18px;
 }
 
 .status{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
   padding:5px 10px;
   border-radius:20px;
   font-size:11px;
   font-weight:bold;
 }
 
-.open{
-  background:var(--greenbg);
+.status.open{
   color:var(--green);
+  background:var(--green-bg);
 }
 
-.partial{
-  background:var(--orangebg);
+.status.soon{
   color:var(--orange);
+  background:var(--orange-bg);
 }
 
-.closed{
-  background:#fdecec;
-  color:var(--red);
+.status.info{
+  color:#12648a;
+  background:#e8f5fb;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:currentColor;
 }
 
 .type{
@@ -302,27 +314,35 @@ main{
 }
 
 .card h3{
-  font-size:18px;
+  font-size:21px;
   margin-bottom:12px;
-  color:#0b4565;
+  color:#0b3e5c;
 }
 
-.info{
+.card .description{
+  color:#60717e;
+  font-size:13px;
+  min-height:66px;
+  margin-bottom:15px;
+}
+
+.info-list{
   display:grid;
-  gap:8px;
+  gap:7px;
+  font-size:12px;
   margin-bottom:18px;
 }
 
-.info div{
-  font-size:12px;
-  color:#607080;
+.info-item{
+  display:flex;
+  gap:7px;
 }
 
-.info strong{
-  color:var(--text);
+.info-item strong{
+  color:#526572;
 }
 
-.card-buttons{
+.card-actions{
   margin-top:auto;
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -331,46 +351,67 @@ main{
 
 .btn{
   border:0;
-  border-radius:10px;
-  padding:11px 8px;
+  border-radius:11px;
+  padding:12px 8px;
   font-weight:bold;
   font-size:12px;
+  text-align:center;
+  text-decoration:none;
 }
 
-.details-btn{
-  background:#edf5f9;
-  color:#07567b;
+.btn-details{
+  background:#edf5f8;
+  color:#075171;
 }
 
-.apply-btn{
-  background:var(--primary);
+.btn-apply{
+  background:#064d6d;
   color:white;
 }
 
-.apply-btn:hover{
-  background:#07557e;
+.btn:hover{
+  opacity:.9;
 }
 
-.no-results{
+.featured-label{
+  position:absolute;
+  top:0;
+  left:0;
+  background:var(--gold);
+  color:#19384a;
+  padding:5px 12px;
+  border-radius:0 0 12px 0;
+  font-size:10px;
+  font-weight:bold;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty{
+  display:none;
   background:white;
-  padding:45px;
+  padding:40px;
   text-align:center;
   border-radius:18px;
+  border:1px solid var(--border);
   color:var(--muted);
-  grid-column:1/-1;
 }
 
-/* MODAL */
+/* =========================
+   MODAL
+========================= */
 
 .modal{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.6);
+  background:rgba(3,25,38,.65);
   z-index:1000;
   display:none;
   align-items:center;
   justify-content:center;
-  padding:20px;
+  padding:18px;
 }
 
 .modal.active{
@@ -379,62 +420,60 @@ main{
 
 .modal-box{
   background:white;
-  width:min(650px,100%);
+  width:min(700px,100%);
   max-height:90vh;
   overflow:auto;
   border-radius:22px;
   padding:25px;
   position:relative;
-  box-shadow:0 20px 70px rgba(0,0,0,.25);
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
 }
 
 .close{
   position:absolute;
-  top:12px;
-  left:15px;
+  left:18px;
+  top:15px;
   width:35px;
   height:35px;
   border:0;
   border-radius:50%;
-  background:#f1f4f7;
+  background:#eef3f6;
+  color:#355;
   font-size:20px;
 }
 
-.modal h2{
-  color:var(--primary);
+.modal-box h2{
+  color:#064d6d;
   margin-bottom:8px;
-  padding-left:40px;
+  padding-left:45px;
 }
 
-.modal-sub{
+.modal-subtitle{
   color:var(--muted);
   font-size:13px;
   margin-bottom:20px;
 }
 
-.detail-list{
-  display:grid;
-  gap:12px;
-  margin-bottom:20px;
+.detail-section{
+  margin-top:20px;
 }
 
-.detail-item{
-  background:#f7fafc;
-  border-radius:12px;
-  padding:12px;
+.detail-section h4{
+  color:#0b4d6b;
+  margin-bottom:8px;
 }
 
-.detail-item strong{
-  display:block;
-  font-size:12px;
-  color:var(--muted);
+.detail-section ul{
+  padding-right:22px;
 }
 
-.detail-item span{
-  font-size:14px;
+.detail-section li{
+  margin-bottom:5px;
+  font-size:13px;
 }
 
 .modal-actions{
+  margin-top:25px;
   display:flex;
   gap:10px;
 }
@@ -442,33 +481,20 @@ main{
 .modal-actions a{
   flex:1;
   text-align:center;
-  padding:13px;
-  border-radius:11px;
-  font-weight:bold;
-  font-size:13px;
 }
 
-.modal-apply{
-  background:var(--primary);
-  color:white;
-}
-
-.modal-close{
-  background:#edf4f8;
-  color:var(--primary);
-  cursor:pointer;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-  background:#032f4a;
+  background:#02344f;
   color:white;
   padding:35px 0;
   text-align:center;
 }
 
-.footer-logo{
+footer .footer-logo{
   color:var(--gold);
   font-size:20px;
   font-weight:bold;
@@ -476,12 +502,12 @@ footer{
 }
 
 footer p{
-  color:rgba(255,255,255,.7);
+  color:rgba(255,255,255,.75);
   font-size:12px;
 }
 
 .footer-links{
-  margin:15px 0;
+  margin-top:15px;
   display:flex;
   justify-content:center;
   gap:20px;
@@ -490,30 +516,26 @@ footer p{
 .footer-links a{
   color:white;
   font-size:12px;
+  text-decoration:none;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:850px){
-
-  .nav{
-    gap:12px;
-  }
-
-  .nav a{
-    font-size:11px;
-  }
+@media(max-width:900px){
 
   .scholarships{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .filters{
-    grid-template-columns:1fr;
+  .hero h1{
+    font-size:40px;
   }
+
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
 
   .container{
     width:min(100% - 20px,1180px);
@@ -524,23 +546,23 @@ footer p{
   }
 
   .logo{
-    font-size:16px;
+    font-size:18px;
   }
 
   .nav{
-    gap:10px;
+    gap:12px;
   }
 
   .nav a{
-    font-size:10px;
+    font-size:11px;
   }
 
   .hero{
-    padding:45px 8px 55px;
+    padding:42px 0 50px;
   }
 
   .hero h1{
-    font-size:34px;
+    font-size:32px;
   }
 
   .hero p{
@@ -548,17 +570,20 @@ footer p{
   }
 
   .search-box{
-    margin-top:25px;
+    border-radius:15px;
   }
 
   .search-box input{
-    font-size:12px;
     padding:13px 10px;
+    font-size:12px;
   }
 
   .search-box button{
-    padding:0 15px;
-    font-size:12px;
+    padding:0 17px;
+  }
+
+  .filters{
+    grid-template-columns:1fr;
   }
 
   .scholarships{
@@ -566,663 +591,2151 @@ footer p{
   }
 
   .card{
-    min-height:300px;
+    min-height:350px;
   }
 
-  .results-head h2{
-    font-size:20px;
+  .section-title{
+    display:block;
   }
 
-  .modal-box{
-    padding:20px 15px;
+  .section-title h2{
+    font-size:22px;
   }
+
+  .section-title p{
+    margin-top:3px;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-  <div class="container">
+<div class="container">
 
-    <nav class="navbar">
+<nav class="navbar">
 
-      <a href="#" class="logo">
-        🎓 سفير <span>المنح الدراسية</span>
-      </a>
+<div class="logo">
+🎓 سفير <span>المنح الدراسية</span>
+</div>
 
-      <div class="nav">
-        <a href="#home">الرئيسية</a>
-        <a href="#scholarships">المنح</a>
-        <a href="#categories">التخصصات</a>
-      </div>
+<div class="nav">
+<a href="#home">الرئيسية</a>
+<a href="#scholarships">المنح</a>
+<a href="#categories">التخصصات</a>
+</div>
 
-    </nav>
+</nav>
 
-  </div>
+<section class="hero" id="home">
 
-  <section class="hero" id="home">
+<div class="badge">
+🚀 فرص جديدة تساعدك تحقق حلمك
+</div>
 
-    <div class="badge">🚀 فرص جديدة تساعدك تحقق حلمك</div>
+<h1>
+اكتشف <span>منحتك القادمة</span>
+</h1>
 
-    <h1>
-      اكتشف <span>منحتك القادمة</span>
-    </h1>
+<p>
+دليلك لاكتشاف المنح الدراسية والفرص التعليمية والجامعات المناسبة لك في مصر.
+</p>
 
-    <p>
-      ابحث عن المنح الدراسية والفرص التعليمية والجامعات المناسبة لك في مكان واحد.
-    </p>
+<div class="search-box">
 
-    <div class="search-box">
+<input
+id="searchInput"
+type="text"
+placeholder="ابحث باسم المنحة أو الجهة أو التخصص..."
+>
 
-      <input
-        id="searchInput"
-        type="search"
-        placeholder="ابحث باسم المنحة أو الجامعة أو التخصص..."
-      >
+<button onclick="searchScholarships()">
+🔎 بحث
+</button>
 
-      <button onclick="filterScholarships()">
-        🔎 بحث
-      </button>
+</div>
 
-    </div>
+</section>
 
-  </section>
+</div>
 
 </header>
 
 
-<main class="container">
+<!-- =========================
+     MAIN
+========================= -->
 
-  <section id="categories">
+<main>
 
-    <div class="section-title">
+<div class="container">
 
-      <h2>🎓 تصفح المنح حسب التخصص</h2>
+<div class="section-title" id="categories">
 
-      <p>
-        استخدم الفلاتر للوصول للمنحة المناسبة لك بسرعة.
-      </p>
+<div>
+<h2>🎓 تصفح المنح حسب التخصص</h2>
+<p>استخدم الفلاتر للوصول للمنحة المناسبة لك بسرعة.</p>
+</div>
 
-    </div>
-
-    <div class="filters">
-
-      <div class="filter">
-
-        <label>التخصص</label>
-
-        <select id="specialtyFilter" onchange="filterScholarships()">
-
-          <option value="all">كل التخصصات</option>
-
-          <option value="طب بشري">طب بشري</option>
-
-          <option value="صيدلة">صيدلة</option>
-
-          <option value="هندسة">هندسة</option>
-
-          <option value="علوم">علوم</option>
-
-          <option value="إدارة وأعمال">إدارة وأعمال</option>
-
-          <option value="حاسبات وذكاء اصطناعي">
-            حاسبات وذكاء اصطناعي
-          </option>
-
-          <option value="تخصصات أخرى">
-            تخصصات أخرى
-          </option>
-
-        </select>
-
-      </div>
+</div>
 
 
-      <div class="filter">
+<div class="filters">
 
-        <label>نوع التمويل</label>
+<div class="filter-group">
 
-        <select id="fundingFilter" onchange="filterScholarships()">
+<label>التخصص</label>
 
-          <option value="all">كل أنواع التمويل</option>
+<select id="specialtyFilter" onchange="filterScholarships()">
 
-          <option value="كاملة">منحة كاملة</option>
+<option value="all">كل التخصصات</option>
+<option value="طب بشري">طب بشري</option>
+<option value="هندسة">هندسة</option>
+<option value="حاسبات">حاسبات وذكاء اصطناعي</option>
+<option value="تمريض">تمريض</option>
+<option value="طب بيطري">طب بيطري</option>
+<option value="علوم">علوم</option>
+<option value="إدارة وأعمال">إدارة وأعمال</option>
+<option value="تخصصات أخرى">تخصصات أخرى</option>
 
-          <option value="جزئية">منحة جزئية</option>
+</select>
 
-        </select>
-
-      </div>
-
-
-      <div class="filter">
-
-        <label>حالة التقديم</label>
-
-        <select id="statusFilter" onchange="filterScholarships()">
-
-          <option value="all">كل الحالات</option>
-
-          <option value="مفتوحة">مفتوحة الآن</option>
-
-          <option value="قريبًا">تفتح قريبًا</option>
-
-          <option value="مغلقة">مغلقة</option>
-
-        </select>
-
-      </div>
-
-    </div>
-
-  </section>
+</div>
 
 
-  <section id="scholarships">
+<div class="filter-group">
 
-    <div class="results-head">
+<label>نوع التمويل</label>
 
-      <div>
+<select id="fundingFilter" onchange="filterScholarships()">
 
-        <h2>🟢 المنح المتاحة الآن</h2>
+<option value="all">كل أنواع التمويل</option>
+<option value="كاملة">منحة كاملة</option>
+<option value="جزئية">منحة جزئية</option>
+<option value="دعم">دعم تعليمي</option>
 
-        <span class="count" id="resultCount">
-          جاري التحميل...
-        </span>
+</select>
 
-      </div>
-
-    </div>
+</div>
 
 
-    <div class="scholarships" id="scholarshipContainer"></div>
+<div class="filter-group">
 
-  </section>
+<label>حالة التقديم</label>
+
+<select id="statusFilter" onchange="filterScholarships()">
+
+<option value="all">كل الحالات</option>
+<option value="open">متاحة الآن</option>
+<option value="soon">قريبًا</option>
+<option value="info">تابع الإعلان</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="section-title" id="scholarships">
+
+<div>
+
+<h2>
+المنح المهمة الآن <span>🟢</span>
+</h2>
+
+<p id="resultCount">
+4 منح رئيسية
+</p>
+
+</div>
+
+</div>
+
+
+<div class="scholarships" id="scholarshipGrid">
+
+
+<!-- =========================
+     1 FUTURE SCHOLARS
+========================= -->
+
+<article
+class="card featured"
+data-name="منحة علماء المستقبل"
+data-specialties="طب بشري هندسة حاسبات تمريض طب بيطري علوم تخصصات أخرى"
+data-funding="كاملة"
+data-status="open"
+>
+
+<div class="featured-label">
+🔥 منحة مهمة جدًا
+</div>
+
+<div class="card-top">
+
+<span class="status open">
+<span class="dot"></span>
+متاحة
+</span>
+
+<span class="type">
+منحة كاملة
+</span>
+
+</div>
+
+<h3>
+منحة علماء المستقبل
+</h3>
+
+<p class="description">
+المبادرة الوطنية لدعم الطلاب المتميزين بالجامعات المصرية، بتمويل كامل يشمل المصروفات الدراسية والإقامة والإعاشة طوال فترة الدراسة وفقًا لاستمرار استحقاق الطالب.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجهة:</strong>
+وزارة التعليم العالي والبنك المركزي
+</div>
+
+<div class="info-item">
+<strong>🎓 التخصصات:</strong>
+طب، هندسة، حاسبات، تمريض وغيرها
+</div>
+
+<div class="info-item">
+<strong>💰 التمويل:</strong>
+كامل
+</div>
+
+<div class="info-item">
+<strong>👨‍🎓 الفئة:</strong>
+طلاب الثانوية العامة وSTEM وفق الشروط
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('future')"
+>
+عرض التفاصيل
+</button>
+
+<a
+class="btn btn-apply"
+href="https://futurescholars.mohesr.gov.eg"
+target="_blank"
+>
+🚀 التقديم
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     2 NEW VALLEY
+========================= -->
+
+<article
+class="card"
+data-name="منحة محافظة الوادي الجديد"
+data-specialties="طب بشري هندسة حاسبات علوم تخصصات أخرى"
+data-funding="كاملة"
+data-status="info"
+>
+
+<div class="card-top">
+
+<span class="status info">
+<span class="dot"></span>
+تابع الإعلان
+</span>
+
+<span class="type">
+منحة محافظة
+</span>
+
+</div>
+
+<h3>
+منحة محافظة الوادي الجديد
+</h3>
+
+<p class="description">
+منح دراسية لأبناء محافظة الوادي الجديد بالتعاون مع الجامعات الخاصة والأهلية، مع استمرار إعلان التفاصيل والشروط حسب كل جامعة.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجهة:</strong>
+محافظة الوادي الجديد
+</div>
+
+<div class="info-item">
+<strong>🎓 المستفيدون:</strong>
+طلاب الثانوية العامة من أبناء المحافظة
+</div>
+
+<div class="info-item">
+<strong>🎁 العدد المعلن:</strong>
+5 منح في تعاون حديث
+</div>
+
+<div class="info-item">
+<strong>📢 الحالة:</strong>
+التفاصيل النهائية تُعلن من المحافظة
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('newvalley')"
+>
+عرض التفاصيل
+</button>
+
+<button
+class="btn btn-apply"
+onclick="showMessage('سيتم إضافة رابط التقديم فور إعلان المحافظة التفاصيل الرسمية.')"
+>
+📢 تابع الإعلان
+</button>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     3 MUST
+========================= -->
+
+<article
+class="card"
+data-name="منحة جامعة مصر للعلوم والتكنولوجيا MUST"
+data-specialties="طب بشري هندسة حاسبات تمريض تخصصات أخرى"
+data-funding="جزئية كاملة"
+data-status="soon"
+>
+
+<div class="card-top">
+
+<span class="status soon">
+<span class="dot"></span>
+قريبًا
+</span>
+
+<span class="type">
+منح جامعية
+</span>
+
+</div>
+
+<h3>
+منحة جامعة مصر للعلوم والتكنولوجيا
+</h3>
+
+<p class="description">
+منح جامعة مصر للعلوم والتكنولوجيا للعام الجامعي 2026–2027، مع فتح باب التقديم وفق المواعيد المعلنة من الجامعة.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجامعة:</strong>
+جامعة مصر للعلوم والتكنولوجيا
+</div>
+
+<div class="info-item">
+<strong>🎓 العام:</strong>
+2026 – 2027
+</div>
+
+<div class="info-item">
+<strong>📅 التقديم:</strong>
+15 أغسطس – 20 أغسطس 2026
+</div>
+
+<div class="info-item">
+<strong>📌 ملاحظة:</strong>
+التفاصيل حسب إعلان الجامعة
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('must')"
+>
+عرض التفاصيل
+</button>
+
+<a
+class="btn btn-apply"
+href="https://must.edu.eg"
+target="_blank"
+>
+🌐 موقع الجامعة
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     4 EGYPT GOOD
+========================= -->
+
+<article
+class="card"
+data-name="منحة مؤسسة مصر الخير"
+data-specialties="طب بشري هندسة حاسبات علوم إدارة وأعمال تخصصات أخرى"
+data-funding="كاملة"
+data-status="open"
+>
+
+<div class="card-top">
+
+<span class="status open">
+<span class="dot"></span>
+متاحة
+</span>
+
+<span class="type">
+منحة مؤسسة خيرية
+</span>
+
+</div>
+
+<h3>
+منحة مؤسسة مصر الخير
+</h3>
+
+<p class="description">
+فرصة تعليمية تستهدف طلاب الثانوية العامة وطلاب مدارس STEM والفئات المستحقة، مع التقديم وفق البرامج والجامعات التي تعلن عنها المؤسسة.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجهة:</strong>
+مؤسسة مصر الخير
+</div>
+
+<div class="info-item">
+<strong>🎓 الفئات:</strong>
+الثانوية العامة وSTEM وذوو الهمم
+</div>
+
+<div class="info-item">
+<strong>💰 التمويل:</strong>
+بحسب برنامج المنحة
+</div>
+
+<div class="info-item">
+<strong>📍 التقديم:</strong>
+عبر قنوات المؤسسة المعلنة
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('mek')"
+>
+عرض التفاصيل
+</button>
+
+<button
+class="btn btn-apply"
+onclick="showMessage('التقديم يتم وفق آلية البرنامج المعلن من مؤسسة مصر الخير.')"
+>
+🚀 طريقة التقديم
+</button>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+<div
+class="empty"
+id="emptyState"
+>
+😔 لم نجد منحًا مطابقة للبحث.
+<br>
+جرّب تغيير الفلاتر أو كلمة البحث.
+</div>
+
+</div>
 
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-  <div class="container">
+<div class="container">
 
-    <div class="footer-logo">
-      🎓 سفير المنح الدراسية
-    </div>
+<div class="footer-logo">
+🎓 سفير المنح الدراسية
+</div>
 
-    <p>
-      دليلك لاكتشاف المنح والفرص التعليمية والجامعات.
-    </p>
+<p>
+دليلك لاكتشاف المنح والفرص التعليمية والجامعات.
+</p>
 
-    <div class="footer-links">
+<div class="footer-links">
 
-      <a href="#home">الرئيسية</a>
-      <a href="#scholarships">المنح</a>
-      <a href="#categories">التخصصات</a>
+<a href="#home">الرئيسية</a>
+<a href="#scholarships">المنح</a>
+<a href="#categories">التخصصات</a>
 
-    </div>
+</div>
 
-    <p>
-      © 2026 جميع الحقوق محفوظة
-    </p>
+<p style="margin-top:15px;">
+© 2026 سفير المنح الدراسية
+</p>
 
-  </div>
+</div>
 
 </footer>
 
 
-<!-- MODAL -->
+<!-- =========================
+     MODAL
+========================= -->
 
-<div class="modal" id="detailsModal">
+<div class="modal" id="modal">
 
-  <div class="modal-box">
+<div class="modal-box">
 
-    <button class="close" onclick="closeModal()">×</button>
+<button class="close" onclick="closeModal()">
+×
+</button>
 
-    <h2 id="modalTitle"></h2>
+<h2 id="modalTitle"></h2>
 
-    <p class="modal-sub" id="modalDescription"></p>
+<p class="modal-subtitle" id="modalSubtitle"></p>
 
-    <div class="detail-list">
+<div id="modalContent"></div>
 
-      <div class="detail-item">
+<div class="modal-actions">
 
-        <strong>🏛️ الجامعة / الجهة</strong>
+<a
+id="modalLink"
+class="btn btn-apply"
+target="_blank"
+>
+🌐 الرابط الرسمي
+</a>
 
-        <span id="modalUniversity"></span>
+<button
+class="btn btn-details"
+onclick="closeModal()"
+>
+إغلاق
+</button>
 
-      </div>
+</div>
 
-      <div class="detail-item">
-
-        <strong>🎓 التخصص</strong>
-
-        <span id="modalSpecialty"></span>
-
-      </div>
-
-      <div class="detail-item">
-
-        <strong>💰 التمويل</strong>
-
-        <span id="modalFunding"></span>
-
-      </div>
-
-      <div class="detail-item">
-
-        <strong>📅 الموعد</strong>
-
-        <span id="modalDeadline"></span>
-
-      </div>
-
-      <div class="detail-item">
-
-        <strong>📍 الدولة</strong>
-
-        <span id="modalCountry"></span>
-
-      </div>
-
-    </div>
-
-    <div class="modal-actions">
-
-      <a
-        id="modalApply"
-        class="modal-apply"
-        href="#"
-        target="_blank"
-        rel="noopener"
-      >
-        🚀 التقديم الرسمي
-      </a>
-
-      <button
-        class="modal-close"
-        onclick="closeModal()"
-      >
-        إغلاق
-      </button>
-
-    </div>
-
-  </div>
+</div>
 
 </div>
 
 
 <script>
 
-/* ==========================================
-   قاعدة بيانات المنح
-   ========================================== */
+/* =========================
+   DATA
+========================= */
 
-const scholarships = [
+const scholarshipDetails = {
 
-  {
-    id:1,
-    title:"منحة دراسية كاملة",
-    university:"جامعة باديا",
-    specialty:"طب بشري",
-    funding:"كاملة",
-    status:"مفتوحة",
-    deadline:"حسب إعلان البرنامج",
-    country:"مصر",
-    description:"منحة دراسية توفر دعمًا كبيرًا للطلاب المستحقين.",
-    apply:"https://www.bue.edu.eg/"
-  },
+future:{
 
-  {
-    id:2,
-    title:"منحة جامعية",
-    university:"جامعة مصرية",
-    specialty:"هندسة",
-    funding:"كاملة",
-    status:"مفتوحة",
-    deadline:"حسب البرنامج",
-    country:"مصر",
-    description:"فرصة للحصول على دعم دراسي للطلاب المتفوقين.",
-    apply:"https://www.google.com/"
-  },
+title:"منحة علماء المستقبل",
 
-  {
-    id:3,
-    title:"منحة حاسبات وذكاء اصطناعي",
-    university:"جامعة مصرية",
-    specialty:"حاسبات وذكاء اصطناعي",
-    funding:"جزئية",
-    status:"قريبًا",
-    deadline:"يعلن لاحقًا",
-    country:"مصر",
-    description:"فرصة تعليمية لطلاب تخصصات الحاسبات والذكاء الاصطناعي.",
-    apply:"https://www.google.com/"
-  },
+subtitle:"المبادرة الوطنية لدعم الطلاب المتميزين بالجامعات المصرية",
 
-  {
-    id:4,
-    title:"منحة إدارة وأعمال",
-    university:"جامعة مصرية",
-    specialty:"إدارة وأعمال",
-    funding:"جزئية",
-    status:"مفتوحة",
-    deadline:"حسب إعلان الجامعة",
-    country:"مصر",
-    description:"دعم دراسي للطلاب الراغبين في دراسة إدارة الأعمال.",
-    apply:"https://www.google.com/"
-  },
+link:"https://futurescholars.mohesr.gov.eg",
 
-  {
-    id:5,
-    title:"منحة العلوم والتكنولوجيا",
-    university:"جامعة مصرية",
-    specialty:"علوم",
-    funding:"كاملة",
-    status:"مفتوحة",
-    deadline:"حسب البرنامج",
-    country:"مصر",
-    description:"منحة مخصصة للطلاب المهتمين بمجالات العلوم والتكنولوجيا.",
-    apply:"https://www.google.com/"
-  },
+content:`
 
-  {
-    id:6,
-    title:"منحة التميز الأكاديمي",
-    university:"جامعة مصرية",
-    specialty:"صيدلة",
-    funding:"جزئية",
-    status:"مفتوحة",
-    deadline:"حسب إعلان الجامعة",
-    country:"مصر",
-    description:"منحة للطلاب المتميزين أكاديميًا.",
-    apply:"https://www.google.com/"
+<div class="detail-section">
+
+<h4>🎓 مميزات المنحة</h4>
+
+<ul>
+
+<li>تغطية كاملة للمصروفات الدراسية.</li>
+
+<li>تغطية الإقامة والإعاشة طوال فترة الدراسة وفقًا لاستمرار استحقاق الطالب.</li>
+
+<li>المنح متاحة في عدد من التخصصات ذات الأولوية.</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>📚 أبرز التخصصات</h4>
+
+<ul>
+
+<li>الطب</li>
+<li>الهندسة</li>
+<li>الحاسبات والذكاء الاصطناعي</li>
+<li>التمريض</li>
+<li>الطب البيطري</li>
+<li>الفنون التطبيقية والتصميم</li>
+<li>الزراعة</li>
+<li>السياحة والفنادق والآثار</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>📌 أهم الشروط</h4>
+
+<ul>
+
+<li>أن يكون المتقدم مصري الجنسية.</li>
+
+<li>أن يكون من المتفوقين دراسيًا ويحقق الحد الأدنى المطلوب لكل كلية.</li>
+
+<li>أن يكون حاصلًا على الثانوية العامة أو شهادة STEM من مدرسة حكومية.</li>
+
+<li>أن يكون من المستفيدين من تكافل وكرامة أو من الطلاب المعفيين من المصروفات الدراسية وفق الشروط.</li>
+
+<li>حسن السيرة والسلوك وعدم الفصل الأكاديمي أو التأديبي.</li>
+
+<li>عدم الجمع مع منحة أخرى ممولة بالتوازي.</li>
+
+</ul>
+
+</div>
+
+`
+
+},
+
+newvalley:{
+
+title:"منحة محافظة الوادي الجديد",
+
+subtitle:"منح دراسية لأبناء المحافظة بالتعاون مع الجامعات",
+
+link:"https://www.newvalley.gov.eg",
+
+content:`
+
+<div class="detail-section">
+
+<h4>🔥 آخر معلومة مؤكدة</h4>
+
+<ul>
+
+<li>تم الإعلان في يوليو 2026 عن الاتفاق على تقديم 5 منح دراسية لطلاب محافظة الوادي الجديد في تخصصات مختلفة بجامعة هليوبوليس.</li>
+
+<li>المحافظة أوضحت أنها تنسق أيضًا مع جامعات أهلية وخاصة أخرى لتوفير منح لطلاب الثانوية العامة.</li>
+
+<li>سيتم الإعلان عن المنح المتاحة وشروط التقديم والالتحاق عبر الصفحة الرسمية للمحافظة بالتزامن مع مواعيد القبول والتنسيق.</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>⚠️ مهم</h4>
+
+<p style="font-size:13px;color:#657681;">
+
+لا نعتمد أي تخصص أو نسبة إعفاء أو موعد تقديم غير معلن رسميًا للدورة الحالية.
+
+</p>
+
+</div>
+
+`
+
+},
+
+must:{
+
+title:"منحة جامعة مصر للعلوم والتكنولوجيا",
+
+subtitle:"MUST Scholarships 2026–2027",
+
+link:"https://must.edu.eg",
+
+content:`
+
+<div class="detail-section">
+
+<h4>📅 موعد التقديم</h4>
+
+<ul>
+
+<li>من السبت 15 أغسطس 2026.</li>
+
+<li>حتى الخميس 20 أغسطس 2026.</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>🎓 عن المنحة</h4>
+
+<p style="font-size:13px;color:#657681;">
+
+الجامعة أعلنت فتح باب التقديم للمنح الدراسية للعام الجامعي 2026–2027.
+
+سيتم عرض تفاصيل وشروط المنح وفق ما تعلنه الجامعة رسميًا.
+
+</p>
+
+</div>
+
+<div class="detail-section">
+
+<h4>⚠️ تنبيه</h4>
+
+<p style="font-size:13px;color:#657681;">
+
+يجب مراجعة إعلان الجامعة الرسمي لمعرفة نوع المنحة ونسبة الإعفاء وشروط كل فئة قبل التقديم.
+
+</p>
+
+</div>
+
+`
+
+},
+
+mek:{
+
+title:"منحة مؤسسة مصر الخير",
+
+subtitle:"فرص تعليمية لطلاب الثانوية العامة وSTEM والفئات المستحقة",
+
+link:"https://mek.org.eg",
+
+content:`
+
+<div class="detail-section">
+
+<h4>🎓 الفئات المستهدفة</h4>
+
+<ul>
+
+<li>طلاب الثانوية العامة.</li>
+
+<li>طلاب مدارس ST<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>سفير المنح الدراسية | منح 2026</title>
+
+<meta name="description"
+content="سفير المنح الدراسية - اكتشف أحدث المنح الدراسية والفرص التعليمية في مصر.">
+
+<style>
+
+:root{
+  --primary:#063b59;
+  --primary2:#087aa3;
+  --gold:#f4c542;
+  --gold2:#d9a72f;
+  --bg:#f4f8fc;
+  --white:#fff;
+  --text:#183142;
+  --muted:#71808d;
+  --green:#14945b;
+  --green-bg:#e8f8f0;
+  --orange:#c98200;
+  --orange-bg:#fff4d8;
+  --red:#c62828;
+  --border:#e3ebf1;
+  --shadow:0 12px 35px rgba(5,48,75,.09);
+  --radius:18px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Tahoma,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+button,
+input,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1180px,calc(100% - 30px));
+  margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.08),transparent 25%),
+    radial-gradient(circle at 85% 15%,rgba(244,197,66,.13),transparent 20%),
+    linear-gradient(135deg,#052d47,#056486 60%,#078db8);
+  color:white;
+  overflow:hidden;
+}
+
+.navbar{
+  min-height:78px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  color:white;
+  font-size:23px;
+  font-weight:900;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+.nav{
+  display:flex;
+  gap:25px;
+}
+
+.nav a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.9;
+}
+
+.nav a:hover{
+  color:var(--gold);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  padding:60px 0 72px;
+  text-align:center;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:30px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:48px;
+  line-height:1.25;
+  margin-bottom:15px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  max-width:700px;
+  margin:0 auto 28px;
+  color:rgba(255,255,255,.88);
+  font-size:17px;
+}
+
+.search-box{
+  width:min(800px,100%);
+  margin:auto;
+  background:white;
+  border-radius:18px;
+  padding:7px;
+  display:flex;
+  box-shadow:0 15px 40px rgba(0,0,0,.16);
+}
+
+.search-box input{
+  flex:1;
+  border:0;
+  outline:0;
+  padding:16px;
+  color:var(--text);
+  background:white;
+}
+
+.search-box button{
+  border:0;
+  background:var(--gold);
+  color:#173449;
+  padding:0 27px;
+  border-radius:13px;
+  font-weight:900;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+  padding:45px 0 70px;
+}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:20px;
+}
+
+.section-title h2{
+  font-size:25px;
+}
+
+.section-title h2 span{
+  color:var(--green);
+}
+
+.section-title p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:16px;
+  box-shadow:var(--shadow);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:35px;
+}
+
+.filter-group label{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:6px;
+}
+
+.filter-group select{
+  width:100%;
+  border:1px solid var(--border);
+  background:white;
+  padding:12px;
+  border-radius:11px;
+  outline:0;
+  color:var(--text);
+}
+
+/* =========================
+   SCHOLARSHIPS
+========================= */
+
+.scholarships{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:20px;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  min-height:370px;
+  transition:.25s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 45px rgba(5,48,75,.13);
+}
+
+.card.featured{
+  border:2px solid var(--gold);
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  margin-bottom:18px;
+}
+
+.status{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.status.open{
+  color:var(--green);
+  background:var(--green-bg);
+}
+
+.status.soon{
+  color:var(--orange);
+  background:var(--orange-bg);
+}
+
+.status.info{
+  color:#12648a;
+  background:#e8f5fb;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:currentColor;
+}
+
+.type{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.card h3{
+  font-size:21px;
+  margin-bottom:12px;
+  color:#0b3e5c;
+}
+
+.card .description{
+  color:#60717e;
+  font-size:13px;
+  min-height:66px;
+  margin-bottom:15px;
+}
+
+.info-list{
+  display:grid;
+  gap:7px;
+  font-size:12px;
+  margin-bottom:18px;
+}
+
+.info-item{
+  display:flex;
+  gap:7px;
+}
+
+.info-item strong{
+  color:#526572;
+}
+
+.card-actions{
+  margin-top:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.btn{
+  border:0;
+  border-radius:11px;
+  padding:12px 8px;
+  font-weight:bold;
+  font-size:12px;
+  text-align:center;
+  text-decoration:none;
+}
+
+.btn-details{
+  background:#edf5f8;
+  color:#075171;
+}
+
+.btn-apply{
+  background:#064d6d;
+  color:white;
+}
+
+.btn:hover{
+  opacity:.9;
+}
+
+.featured-label{
+  position:absolute;
+  top:0;
+  left:0;
+  background:var(--gold);
+  color:#19384a;
+  padding:5px 12px;
+  border-radius:0 0 12px 0;
+  font-size:10px;
+  font-weight:bold;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty{
+  display:none;
+  background:white;
+  padding:40px;
+  text-align:center;
+  border-radius:18px;
+  border:1px solid var(--border);
+  color:var(--muted);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(3,25,38,.65);
+  z-index:1000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-box{
+  background:white;
+  width:min(700px,100%);
+  max-height:90vh;
+  overflow:auto;
+  border-radius:22px;
+  padding:25px;
+  position:relative;
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
+}
+
+.close{
+  position:absolute;
+  left:18px;
+  top:15px;
+  width:35px;
+  height:35px;
+  border:0;
+  border-radius:50%;
+  background:#eef3f6;
+  color:#355;
+  font-size:20px;
+}
+
+.modal-box h2{
+  color:#064d6d;
+  margin-bottom:8px;
+  padding-left:45px;
+}
+
+.modal-subtitle{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.detail-section{
+  margin-top:20px;
+}
+
+.detail-section h4{
+  color:#0b4d6b;
+  margin-bottom:8px;
+}
+
+.detail-section ul{
+  padding-right:22px;
+}
+
+.detail-section li{
+  margin-bottom:5px;
+  font-size:13px;
+}
+
+.modal-actions{
+  margin-top:25px;
+  display:flex;
+  gap:10px;
+}
+
+.modal-actions a{
+  flex:1;
+  text-align:center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#02344f;
+  color:white;
+  padding:35px 0;
+  text-align:center;
+}
+
+footer .footer-logo{
+  color:var(--gold);
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+footer p{
+  color:rgba(255,255,255,.75);
+  font-size:12px;
+}
+
+.footer-links{
+  margin-top:15px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.footer-links a{
+  color:white;
+  font-size:12px;
+  text-decoration:none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .scholarships{
+    grid-template-columns:repeat(2,1fr);
   }
 
-];
-
-
-/* ==========================================
-   عرض المنح
-   ========================================== */
-
-function displayScholarships(data){
-
-  const container =
-    document.getElementById("scholarshipContainer");
-
-  const count =
-    document.getElementById("resultCount");
-
-  container.innerHTML = "";
-
-  count.textContent =
-    `تم العثور على ${data.length} منحة`;
-
-
-  if(data.length === 0){
-
-    container.innerHTML = `
-      <div class="no-results">
-        <div style="font-size:40px;">🔍</div>
-        <h3>لم نجد منحًا مطابقة</h3>
-        <p>جرّب تغيير البحث أو الفلاتر.</p>
-      </div>
-    `;
-
-    return;
+  .hero h1{
+    font-size:40px;
   }
 
+}
 
-  data.forEach(item => {
+@media(max-width:650px){
 
-    const statusClass =
-      item.status === "مفتوحة"
-      ? "open"
-      : item.status === "قريبًا"
-      ? "partial"
-      : "closed";
+  .container{
+    width:min(100% - 20px,1180px);
+  }
 
+  .navbar{
+    min-height:65px;
+  }
 
-    const card = document.createElement("article");
+  .logo{
+    font-size:18px;
+  }
 
-    card.className = "card";
+  .nav{
+    gap:12px;
+  }
 
+  .nav a{
+    font-size:11px;
+  }
 
-    card.innerHTML = `
+  .hero{
+    padding:42px 0 50px;
+  }
 
-      <div class="card-top">
+  .hero h1{
+    font-size:32px;
+  }
 
-        <span class="status ${statusClass}">
-          ${item.status}
-        </span>
+  .hero p{
+    font-size:13px;
+  }
 
-        <span class="type">
-          ${item.funding === "كاملة" ? "💰 منحة كاملة" : "💵 منحة جزئية"}
-        </span>
+  .search-box{
+    border-radius:15px;
+  }
 
-      </div>
+  .search-box input{
+    padding:13px 10px;
+    font-size:12px;
+  }
 
+  .search-box button{
+    padding:0 17px;
+  }
 
-      <h3>${item.title}</h3>
+  .filters{
+    grid-template-columns:1fr;
+  }
 
+  .scholarships{
+    grid-template-columns:1fr;
+  }
 
-      <div class="info">
+  .card{
+    min-height:350px;
+  }
 
-        <div>
-          🏛️ الجامعة:
-          <strong>${item.university}</strong>
-        </div>
+  .section-title{
+    display:block;
+  }
 
-        <div>
-          🎓 التخصص:
-          <strong>${item.specialty}</strong>
-        </div>
+  .section-title h2{
+    font-size:22px;
+  }
 
-        <div>
-          💰 التمويل:
-          <strong>${item.funding}</strong>
-        </div>
-
-        <div>
-          📅 الموعد:
-          <strong>${item.deadline}</strong>
-        </div>
-
-      </div>
-
-
-      <div class="card-buttons">
-
-        <button
-          class="btn details-btn"
-          onclick="openDetails(${item.id})"
-        >
-          عرض التفاصيل
-        </button>
-
-        <a
-          class="btn apply-btn"
-          href="${item.apply}"
-          target="_blank"
-          rel="noopener"
-        >
-          التقديم 🚀
-        </a>
-
-      </div>
-
-    `;
-
-
-    container.appendChild(card);
-
-  });
+  .section-title p{
+    margin-top:3px;
+  }
 
 }
 
+</style>
+</head>
 
-/* ==========================================
-   البحث والفلاتر
-   ========================================== */
+<body>
 
-function filterScholarships(){
+<!-- =========================
+     HEADER
+========================= -->
 
-  const search =
-    document
-      .getElementById("searchInput")
-      .value
-      .trim()
-      .toLowerCase();
+<header>
 
+<div class="container">
 
-  const specialty =
-    document
-      .getElementById("specialtyFilter")
-      .value;
+<nav class="navbar">
 
+<div class="logo">
+🎓 سفير <span>المنح الدراسية</span>
+</div>
 
-  const funding =
-    document
-      .getElementById("fundingFilter")
-      .value;
+<div class="nav">
+<a href="#home">الرئيسية</a>
+<a href="#scholarships">المنح</a>
+<a href="#categories">التخصصات</a>
+</div>
 
+</nav>
 
-  const status =
-    document
-      .getElementById("statusFilter")
-      .value;
+<section class="hero" id="home">
 
+<div class="badge">
+🚀 فرص جديدة تساعدك تحقق حلمك
+</div>
 
-  const filtered =
-    scholarships.filter(item => {
+<h1>
+اكتشف <span>منحتك القادمة</span>
+</h1>
 
-      const text =
-        `
-        ${item.title}
-        ${item.university}
-        ${item.specialty}
-        ${item.country}
-        ${item.description}
-        `
-        .toLowerCase();
+<p>
+دليلك لاكتشاف المنح الدراسية والفرص التعليمية والجامعات المناسبة لك في مصر.
+</p>
 
+<div class="search-box">
 
-      const matchesSearch =
-        !search ||
-        text.includes(search);
+<input
+id="searchInput"
+type="text"
+placeholder="ابحث باسم المنحة أو الجهة أو التخصص..."
+>
 
+<button onclick="searchScholarships()">
+🔎 بحث
+</button>
 
-      const matchesSpecialty =
-        specialty === "all" ||
-        item.specialty === specialty;
+</div>
 
+</section>
 
-      const matchesFunding =
-        funding === "all" ||
-        item.funding === funding;
+</div>
 
-
-      const matchesStatus =
-        status === "all" ||
-        item.status === status;
+</header>
 
 
-      return (
-        matchesSearch &&
-        matchesSpecialty &&
-        matchesFunding &&
-        matchesStatus
-      );
+<!-- =========================
+     MAIN
+========================= -->
 
-    });
+<main>
 
+<div class="container">
 
-  displayScholarships(filtered);
+<div class="section-title" id="categories">
 
-}
+<div>
+<h2>🎓 تصفح المنح حسب التخصص</h2>
+<p>استخدم الفلاتر للوصول للمنحة المناسبة لك بسرعة.</p>
+</div>
 
-
-/* ==========================================
-   نافذة التفاصيل
-   ========================================== */
-
-function openDetails(id){
-
-  const item =
-    scholarships.find(x => x.id === id);
-
-  if(!item) return;
+</div>
 
 
-  document.getElementById("modalTitle").textContent =
-    item.title;
+<div class="filters">
 
-  document.getElementById("modalDescription").textContent =
-    item.description;
+<div class="filter-group">
 
-  document.getElementById("modalUniversity").textContent =
-    item.university;
+<label>التخصص</label>
 
-  document.getElementById("modalSpecialty").textContent =
-    item.specialty;
+<select id="specialtyFilter" onchange="filterScholarships()">
 
-  document.getElementById("modalFunding").textContent =
-    item.funding;
+<option value="all">كل التخصصات</option>
+<option value="طب بشري">طب بشري</option>
+<option value="هندسة">هندسة</option>
+<option value="حاسبات">حاسبات وذكاء اصطناعي</option>
+<option value="تمريض">تمريض</option>
+<option value="طب بيطري">طب بيطري</option>
+<option value="علوم">علوم</option>
+<option value="إدارة وأعمال">إدارة وأعمال</option>
+<option value="تخصصات أخرى">تخصصات أخرى</option>
 
-  document.getElementById("modalDeadline").textContent =
-    item.deadline;
+</select>
 
-  document.getElementById("modalCountry").textContent =
-    item.country;
-
-  document.getElementById("modalApply").href =
-    item.apply;
+</div>
 
 
-  document
-    .getElementById("detailsModal")
-    .classList.add("active");
+<div class="filter-group">
 
-}
+<label>نوع التمويل</label>
 
+<select id="fundingFilter" onchange="filterScholarships()">
 
-function closeModal(){
+<option value="all">كل أنواع التمويل</option>
+<option value="كاملة">منحة كاملة</option>
+<option value="جزئية">منحة جزئية</option>
+<option value="دعم">دعم تعليمي</option>
 
-  document
-    .getElementById("detailsModal")
-    .classList.remove("active");
+</select>
 
-}
-
-
-/* إغلاق النافذة عند الضغط خارجها */
-
-document
-  .getElementById("detailsModal")
-  .addEventListener("click", function(e){
-
-    if(e.target === this){
-      closeModal();
-    }
-
-  });
+</div>
 
 
-/* البحث أثناء الكتابة */
+<div class="filter-group">
 
-document
-  .getElementById("searchInput")
-  .addEventListener("input", filterScholarships);
+<label>حالة التقديم</label>
+
+<select id="statusFilter" onchange="filterScholarships()">
+
+<option value="all">كل الحالات</option>
+<option value="open">متاحة الآن</option>
+<option value="soon">قريبًا</option>
+<option value="info">تابع الإعلان</option>
+
+</select>
+
+</div>
+
+</div>
 
 
-/* تشغيل الموقع */
+<div class="section-title" id="scholarships">
 
-displayScholarships(scholarships);
+<div>
 
-</script>
+<h2>
+المنح المهمة الآن <span>🟢</span>
+</h2>
 
-</body>
-  </html>
+<p id="resultCount">
+4 منح رئيسية
+</p>
+
+</div>
+
+</div>
+
+
+<div class="scholarships" id="scholarshipGrid">
+
+
+<!-- =========================
+     1 FUTURE SCHOLARS
+========================= -->
+
+<article
+class="card featured"
+data-name="منحة علماء المستقبل"
+data-specialties="طب بشري هندسة حاسبات تمريض طب بيطري علوم تخصصات أخرى"
+data-funding="كاملة"
+data-status="open"
+>
+
+<div class="featured-label">
+🔥 منحة مهمة جدًا
+</div>
+
+<div class="card-top">
+
+<span class="status open">
+<span class="dot"></span>
+متاحة
+</span>
+
+<span class="type">
+منحة كاملة
+</span>
+
+</div>
+
+<h3>
+منحة علماء المستقبل
+</h3>
+
+<p class="description">
+المبادرة الوطنية لدعم الطلاب المتميزين بالجامعات المصرية، بتمويل كامل يشمل المصروفات الدراسية والإقامة والإعاشة طوال فترة الدراسة وفقًا لاستمرار استحقاق الطالب.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجهة:</strong>
+وزارة التعليم العالي والبنك المركزي
+</div>
+
+<div class="info-item">
+<strong>🎓 التخصصات:</strong>
+طب، هندسة، حاسبات، تمريض وغيرها
+</div>
+
+<div class="info-item">
+<strong>💰 التمويل:</strong>
+كامل
+</div>
+
+<div class="info-item">
+<strong>👨‍🎓 الفئة:</strong>
+طلاب الثانوية العامة وSTEM وفق الشروط
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('future')"
+>
+عرض التفاصيل
+</button>
+
+<a
+class="btn btn-apply"
+href="https://futurescholars.mohesr.gov.eg"
+target="_blank"
+>
+🚀 التقديم
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     2 NEW VALLEY
+========================= -->
+
+<article
+class="card"
+data-name="منحة محافظة الوادي الجديد"
+data-specialties="طب بشري هندسة حاسبات علوم تخصصات أخرى"
+data-funding="كاملة"
+data-status="info"
+>
+
+<div class="card-top">
+
+<span class="status info">
+<span class="dot"></span>
+تابع الإعلان
+</span>
+
+<span class="type">
+منحة محافظة
+</span>
+
+</div>
+
+<h3>
+منحة محافظة الوادي الجديد
+</h3>
+
+<p class="description">
+منح دراسية لأبناء محافظة الوادي الجديد بالتعاون مع الجامعات الخاصة والأهلية، مع استمرار إعلان التفاصيل والشروط حسب كل جامعة.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجهة:</strong>
+محافظة الوادي الجديد
+</div>
+
+<div class="info-item">
+<strong>🎓 المستفيدون:</strong>
+طلاب الثانوية العامة من أبناء المحافظة
+</div>
+
+<div class="info-item">
+<strong>🎁 العدد المعلن:</strong>
+5 منح في تعاون حديث
+</div>
+
+<div class="info-item">
+<strong>📢 الحالة:</strong>
+التفاصيل النهائية تُعلن من المحافظة
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('newvalley')"
+>
+عرض التفاصيل
+</button>
+
+<button
+class="btn btn-apply"
+onclick="showMessage('سيتم إضافة رابط التقديم فور إعلان المحافظة التفاصيل الرسمية.')"
+>
+📢 تابع الإعلان
+</button>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     3 MUST
+========================= -->
+
+<article
+class="card"
+data-name="منحة جامعة مصر للعلوم والتكنولوجيا MUST"
+data-specialties="طب بشري هندسة حاسبات تمريض تخصصات أخرى"
+data-funding="جزئية كاملة"
+data-status="soon"
+>
+
+<div class="card-top">
+
+<span class="status soon">
+<span class="dot"></span>
+قريبًا
+</span>
+
+<span class="type">
+منح جامعية
+</span>
+
+</div>
+
+<h3>
+منحة جامعة مصر للعلوم والتكنولوجيا
+</h3>
+
+<p class="description">
+منح جامعة مصر للعلوم والتكنولوجيا للعام الجامعي 2026–2027، مع فتح باب التقديم وفق المواعيد المعلنة من الجامعة.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجامعة:</strong>
+جامعة مصر للعلوم والتكنولوجيا
+</div>
+
+<div class="info-item">
+<strong>🎓 العام:</strong>
+2026 – 2027
+</div>
+
+<div class="info-item">
+<strong>📅 التقديم:</strong>
+15 أغسطس – 20 أغسطس 2026
+</div>
+
+<div class="info-item">
+<strong>📌 ملاحظة:</strong>
+التفاصيل حسب إعلان الجامعة
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('must')"
+>
+عرض التفاصيل
+</button>
+
+<a
+class="btn btn-apply"
+href="https://must.edu.eg"
+target="_blank"
+>
+🌐 موقع الجامعة
+</a>
+
+</div>
+
+</article>
+
+
+<!-- =========================
+     4 EGYPT GOOD
+========================= -->
+
+<article
+class="card"
+data-name="منحة مؤسسة مصر الخير"
+data-specialties="طب بشري هندسة حاسبات علوم إدارة وأعمال تخصصات أخرى"
+data-funding="كاملة"
+data-status="open"
+>
+
+<div class="card-top">
+
+<span class="status open">
+<span class="dot"></span>
+متاحة
+</span>
+
+<span class="type">
+منحة مؤسسة خيرية
+</span>
+
+</div>
+
+<h3>
+منحة مؤسسة مصر الخير
+</h3>
+
+<p class="description">
+فرصة تعليمية تستهدف طلاب الثانوية العامة وطلاب مدارس STEM والفئات المستحقة، مع التقديم وفق البرامج والجامعات التي تعلن عنها المؤسسة.
+</p>
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>🏛️ الجهة:</strong>
+مؤسسة مصر الخير
+</div>
+
+<div class="info-item">
+<strong>🎓 الفئات:</strong>
+الثانوية العامة وSTEM وذوو الهمم
+</div>
+
+<div class="info-item">
+<strong>💰 التمويل:</strong>
+بحسب برنامج المنحة
+</div>
+
+<div class="info-item">
+<strong>📍 التقديم:</strong>
+عبر قنوات المؤسسة المعلنة
+</div>
+
+</div>
+
+<div class="card-actions">
+
+<button
+class="btn btn-details"
+onclick="openModal('mek')"
+>
+عرض التفاصيل
+</button>
+
+<button
+class="btn btn-apply"
+onclick="showMessage('التقديم يتم وفق آلية البرنامج المعلن من مؤسسة مصر الخير.')"
+>
+🚀 طريقة التقديم
+</button>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+<div
+class="empty"
+id="emptyState"
+>
+😔 لم نجد منحًا مطابقة للبحث.
+<br>
+جرّب تغيير الفلاتر أو كلمة البحث.
+</div>
+
+</div>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-logo">
+🎓 سفير المنح الدراسية
+</div>
+
+<p>
+دليلك لاكتشاف المنح والفرص التعليمية والجامعات.
+</p>
+
+<div class="footer-links">
+
+<a href="#home">الرئيسية</a>
+<a href="#scholarships">المنح</a>
+<a href="#categories">التخصصات</a>
+
+</div>
+
+<p style="margin-top:15px;">
+© 2026 سفير المنح الدراسية
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeModal()">
+×
+</button>
+
+<h2 id="modalTitle"></h2>
+
+<p class="modal-subtitle" id="modalSubtitle"></p>
+
+<div id="modalContent"></div>
+
+<div class="modal-actions">
+
+<a
+id="modalLink"
+class="btn btn-apply"
+target="_blank"
+>
+🌐 الرابط الرسمي
+</a>
+
+<button
+class="btn btn-details"
+onclick="closeModal()"
+>
+إغلاق
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   DATA
+========================= */
+
+const scholarshipDetails = {
+
+future:{
+
+title:"منحة علماء المستقبل",
+
+subtitle:"المبادرة الوطنية لدعم الطلاب المتميزين بالجامعات المصرية",
+
+link:"https://futurescholars.mohesr.gov.eg",
+
+content:`
+
+<div class="detail-section">
+
+<h4>🎓 مميزات المنحة</h4>
+
+<ul>
+
+<li>تغطية كاملة للمصروفات الدراسية.</li>
+
+<li>تغطية الإقامة والإعاشة طوال فترة الدراسة وفقًا لاستمرار استحقاق الطالب.</li>
+
+<li>المنح متاحة في عدد من التخصصات ذات الأولوية.</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>📚 أبرز التخصصات</h4>
+
+<ul>
+
+<li>الطب</li>
+<li>الهندسة</li>
+<li>الحاسبات والذكاء الاصطناعي</li>
+<li>التمريض</li>
+<li>الطب البيطري</li>
+<li>الفنون التطبيقية والتصميم</li>
+<li>الزراعة</li>
+<li>السياحة والفنادق والآثار</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>📌 أهم الشروط</h4>
+
+<ul>
+
+<li>أن يكون المتقدم مصري الجنسية.</li>
+
+<li>أن يكون من المتفوقين دراسيًا ويحقق الحد الأدنى المطلوب لكل كلية.</li>
+
+<li>أن يكون حاصلًا على الثانوية العامة أو شهادة STEM من مدرسة حكومية.</li>
+
+<li>أن يكون من المستفيدين من تكافل وكرامة أو من الطلاب المعفيين من المصروفات الدراسية وفق الشروط.</li>
+
+<li>حسن السيرة والسلوك وعدم الفصل الأكاديمي أو التأديبي.</li>
+
+<li>عدم الجمع مع منحة أخرى ممولة بالتوازي.</li>
+
+</ul>
+
+</div>
+
+`
+
+},
+
+newvalley:{
+
+title:"منحة محافظة الوادي الجديد",
+
+subtitle:"منح دراسية لأبناء المحافظة بالتعاون مع الجامعات",
+
+link:"https://www.newvalley.gov.eg",
+
+content:`
+
+<div class="detail-section">
+
+<h4>🔥 آخر معلومة مؤكدة</h4>
+
+<ul>
+
+<li>تم الإعلان في يوليو 2026 عن الاتفاق على تقديم 5 منح دراسية لطلاب محافظة الوادي الجديد في تخصصات مختلفة بجامعة هليوبوليس.</li>
+
+<li>المحافظة أوضحت أنها تنسق أيضًا مع جامعات أهلية وخاصة أخرى لتوفير منح لطلاب الثانوية العامة.</li>
+
+<li>سيتم الإعلان عن المنح المتاحة وشروط التقديم والالتحاق عبر الصفحة الرسمية للمحافظة بالتزامن مع مواعيد القبول والتنسيق.</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>⚠️ مهم</h4>
+
+<p style="font-size:13px;color:#657681;">
+
+لا نعتمد أي تخصص أو نسبة إعفاء أو موعد تقديم غير معلن رسميًا للدورة الحالية.
+
+</p>
+
+</div>
+
+`
+
+},
+
+must:{
+
+title:"منحة جامعة مصر للعلوم والتكنولوجيا",
+
+subtitle:"MUST Scholarships 2026–2027",
+
+link:"https://must.edu.eg",
+
+content:`
+
+<div class="detail-section">
+
+<h4>📅 موعد التقديم</h4>
+
+<ul>
+
+<li>من السبت 15 أغسطس 2026.</li>
+
+<li>حتى الخميس 20 أغسطس 2026.</li>
+
+</ul>
+
+</div>
+
+<div class="detail-section">
+
+<h4>🎓 عن المنحة</h4>
+
+<p style="font-size:13px;color:#657681;">
+
+الجامعة أعلنت فتح باب التقديم للمنح الدراسية للعام الجامعي 2026–2027.
+
+سيتم عرض تفاصيل وشروط المنح وفق ما تعلنه الجامعة رسميًا.
+
+</p>
+
+</div>
+
+<div class="detail-section">
+
+<h4>⚠️ تنبيه</h4>
+
+<p style="font-size:13px;color:#657681;">
+
+يجب مراجعة إعلان الجامعة الرسمي لمعرفة نوع المنحة ونسبة الإعفاء وشروط كل فئة قبل التقديم.
+
+</p>
+
+</div>
+
+`
+
+},
+
+mek:{
+
+title:"منحة مؤسسة مصر الخير",
+
+subtitle:"فرص تعليمية لطلاب الثانوية العامة وSTEM والفئات المستحقة",
+
+link:"https://mek.org.eg",
+
+content:`
+
+<div class="detail-section">
+
+<h4>🎓 الفئات المستهدفة</h4>
+
+<ul>
+
+<li>طلاب الثانوية العامة.</li>
+
+<li>طلاب مدارس ST
